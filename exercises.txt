@@ -1,0 +1,16 @@
+chapter 2:
+1. the purpose of the Hello, world program is to print the text on the screen
+2. parts of function:
+	1. parameters
+	2. return types
+	3. name
+	4. function body (containing statements)
+3. the function main() must appear in every c++ program
+4. return 0 is related to the function int main(), where we have instructed the function to return integer type value, so return 0 makes sure that when the function is run successfully we get to see the 0 value as a return confirming that our program was successful.
+5. a compiler helps turn the source code written in human language into machine code that can be understood by the computer.
+6. #include directive instruct the program to use the specified header and make available the different functions in that header
+7. the .h means header and contains functions that can be used in a function, they are written by other programmers
+8. a linker links the object code with object code from the c++ standard library to create an application
+9. a source file is a file that contains the written code while the object file is a file that is a result of compiling process with instructions that can be processed by the machine
+10. IDE: intergrated development environment is used to help you write and run your programs efficiently by providing some guidance and autofills at some point. it is user friendly
+11. practice helps you master the task at hand and to understand deeper the meaning of the task.
