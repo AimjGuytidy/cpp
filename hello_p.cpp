@@ -67,17 +67,30 @@ inline void keep_windy() { char ch; cin >> ch; }
 // Operations and operators
 
 // simple program to exercise operators
+//int main()
+//{
+//	cout << "Please enter a floating-point value:\n";
+//	double n;
+//	cin >> n;
+//	cout << "n == " << n
+//		<< "\nn+1 == " << n + 1
+//		<< "\nthree times n == " << n * 3
+//		<< "\nn twice == " << n + n
+//		<< "\nn squared == " << n * n
+//		<< "\nhalf of n == " << n / 2
+//		<< "\nsquare root of n == " << sqrt(n)
+//		<< "\n";
+//}
+
+// try-this 
 int main()
 {
-	cout << "Please enter a floating-point value:\n";
-	double n;
+	cout << "enter an integer number:\n";
+	int n;
 	cin >> n;
+	double n_fl = n;
 	cout << "n == " << n
-		<< "\nn+1 == " << n + 1
-		<< "\nthree times n == " << n * 3
-		<< "\nn twice == " << n + n
-		<< "\nn squared == " << n * n
-		<< "\nhalf of n == " << n / 2
-		<< "\nsquare root of n == " << sqrt(n)
+		<< "\nmodulo of n 2 == " << n % 2
+		<< "\nsquare root of n == " << sqrt(n_fl)
 		<< "\n";
 }
