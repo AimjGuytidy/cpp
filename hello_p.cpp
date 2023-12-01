@@ -55,14 +55,29 @@ inline void keep_windy() { char ch; cin >> ch; }
 //}
 
 // example
-int main()
-{
-	cout << "Please enter your name and age:\n";
-	string f_n;
-	double age;
-	cin >> f_n >> age;
-	cout << "Your name is " << f_n << " and you are " << age * 12 << " months old!";
-}
+//int main()
+//{
+//	cout << "Please enter your name and age:\n";
+//	string f_n; // variable definition
+//	double age; // variable definition
+//	cin >> f_n >> age;
+//	cout << "Your name is " << f_n << " and you are " << age * 12 << " months old!";
+//}
 
 // Operations and operators
 
+// simple program to exercise operators
+int main()
+{
+	cout << "Please enter a floating-point value:\n";
+	double n;
+	cin >> n;
+	cout << "n == " << n
+		<< "\nn+1 == " << n + 1
+		<< "\nthree times n == " << n * 3
+		<< "\nn twice == " << n + n
+		<< "\nn squared == " << n * n
+		<< "\nhalf of n == " << n / 2
+		<< "\nsquare root of n == " << sqrt(n)
+		<< "\n";
+}
