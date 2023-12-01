@@ -83,14 +83,26 @@ inline void keep_windy() { char ch; cin >> ch; }
 //}
 
 // try-this 
+//int main()
+//{
+//	cout << "enter an integer number:\n";
+//	int n;
+//	cin >> n;
+//	double n_fl = n;
+//	cout << "n == " << n
+//		<< "\nmodulo of n 2 == " << n % 2
+//		<< "\nsquare root of n == " << sqrt(n_fl)
+//		<< "\n";
+//}
+
+// simple practice
 int main()
 {
-	cout << "enter an integer number:\n";
-	int n;
-	cin >> n;
-	double n_fl = n;
-	cout << "n == " << n
-		<< "\nmodulo of n 2 == " << n % 2
-		<< "\nsquare root of n == " << sqrt(n_fl)
-		<< "\n";
+	cout << "Enter your first name and second name: \n";
+	string first;
+	string second;
+	cin >> first >> second;
+	string name_full = first + ' ' + second;
+	cout << "Your name is " << name_full << "!\n";
+	keep_windy();
 }
