@@ -96,13 +96,45 @@ inline void keep_windy() { char ch; cin >> ch; }
 //}
 
 // simple practice
-int main()
-{
-	cout << "Enter your first name and second name: \n";
-	string first;
-	string second;
-	cin >> first >> second;
-	string name_full = first + ' ' + second;
-	cout << "Your name is " << name_full << "!\n";
-	keep_windy();
+//int main()
+//{
+//	cout << "Enter your first name and second name: \n";
+//	string first;
+//	string second;
+//	cin >> first >> second;
+//	string name_full = first + ' ' + second;
+//	cout << "Your name is " << name_full << "!\n";
+//	keep_windy();
+//}
+
+// simple practice
+//int main()
+//{
+//	cout << "Enter your name:\n";
+//	string first;
+//	string second;
+//	cin >> first >> second;
+//	if (first == second)
+//		cout << "your first name is the same with your second"<<"\n";
+//	if (first > second)
+//		cout << first << " is alphabetically greater than " << second <<"\n";
+//	if (first < second)
+//		cout << first << " is alphabetically less than " << second << "\n";
+//	cout << "your name is " << first << " " << second << "! \n";
+//	keep_windy();
+//}
+
+// assignment and initialization
+// an example for detecting repeated words
+
+int main() {
+	string previous = " "; // initializing the variable previous
+	string current; // init current variable
+	while (cin >> current) {
+		if (current == previous) {
+			cout << "repeated previous word: " << current << "\n";
+
+		}
+		previous = current; // assigning current to previous
+	}
 }
