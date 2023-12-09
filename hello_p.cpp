@@ -141,16 +141,36 @@ inline void keep_windy() { char ch; cin >> ch; }
 
 // Composite assignment operators
 
-int main(){
-	int word_numbers = 0; // init number of words
-	string previous = " ";
-	string current;
-	while (cin >> current) {
-		++word_numbers;
-		if (current == previous) {
-			cout << "\nword count: " << word_numbers << "\n"
-				<< "repeated words: " << current << "\n";
-		}
-		previous = current;
-	}
+//int main(){
+//	int word_numbers = 0; // init number of words
+//	string previous = " ";
+//	string current;
+//	while (cin >> current) {
+//		++word_numbers;
+//		if (current == previous) {
+//			cout << "\nword count: " << word_numbers << "\n"
+//				<< "repeated words: " << current << "\n";
+//		}
+//		previous = current;
+//	}
+//}
+
+// Names
+
+int main() {
+	string s = "Goodbye, cruel world!";
+	cout << s << "\n";
+	return 0;
 }
+
+// Types and objects
+
+// type: a set of all possible values and a set of all possible operations
+// object: some memory for a value of certain type
+// value: a set of bits interpreted by their type
+// variable: a named object
+// definition: declaration that set aside some memory for an object
+// declaration: statement that gives a name to an object
+
+// Type safety
+
