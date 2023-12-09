@@ -127,14 +127,30 @@ inline void keep_windy() { char ch; cin >> ch; }
 // assignment and initialization
 // an example for detecting repeated words
 
-int main() {
-	string previous = " "; // initializing the variable previous
-	string current; // init current variable
-	while (cin >> current) {
-		if (current == previous) {
-			cout << "repeated previous word: " << current << "\n";
+//int main() {
+//	string previous = " "; // initializing the variable previous
+//	string current; // init current variable
+//	while (cin >> current) {
+//		if (current == previous) {
+//			cout << "repeated previous word: " << current << "\n";
+//
+//		}
+//		previous = current; // assigning current to previous
+//	}
+//}
 
+// Composite assignment operators
+
+int main(){
+	int word_numbers = 0; // init number of words
+	string previous = " ";
+	string current;
+	while (cin >> current) {
+		++word_numbers;
+		if (current == previous) {
+			cout << "\nword count: " << word_numbers << "\n"
+				<< "repeated words: " << current << "\n";
 		}
-		previous = current; // assigning current to previous
+		previous = current;
 	}
 }
