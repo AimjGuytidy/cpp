@@ -427,13 +427,34 @@ int main() {
 
 // Testing odd or even integers
 
+//int main() {
+//	cout << " Please enter an integer: \n";
+//	int  i1 = 0;
+//	cin >> i1;
+//	if (i1 % 2 == 0)
+//		cout << "The value " << i1 << " is an even number.\n";
+//	else
+//		cout << "The value " << i1 << " is an odd number.\n";
+//	keep_windy();
+//}
+
+// converting spelled out numbers
+
 int main() {
-	cout << " Please enter an integer: \n";
-	int  i1 = 0;
-	cin >> i1;
-	if (i1 % 2 == 0)
-		cout << "The value " << i1 << " is an even number.\n";
+	cout << "Please enter a spelled out number: \n";
+	string s1 = " ";
+	cin >> s1;
+	if (s1 == "zero")
+		cout << "The digit equivalent is 0.\n";
+	if (s1 == "one")
+		cout << "The digit equivalent is 1.\n";
+	if (s1 == "two")
+		cout << "The digit equivalent is 2.\n";
+	if (s1 == "three")
+		cout << "The digit equivalent is 3.\n";
+	if (s1 == "four")
+		cout << "The digit equivalent is 4.\n";
 	else
-		cout << "The value " << i1 << " is an odd number.\n";
+		cout << "not a number I know!\n";
 	keep_windy();
 }
