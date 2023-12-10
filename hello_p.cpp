@@ -461,21 +461,75 @@ int main() {
 
 // operations and operands
 
+//int main() {
+//	cout << "Enter operation followed by operands: \n";
+//	string operation = " ";
+//	double operand1 = 0.0;
+//	double operand2 = 0.0;
+//	cin >> operation >> operand1 >> operand2;
+//	if (operation == "+")
+//		cout << "The result is: " << operand1 + operand2 << "\n";
+//	if (operation == "*")
+//		cout << "The result is: " << operand1 * operand2 << "\n";
+//	if (operation == "-")
+//		cout << "The result is: " << operand1 - operand2 << "\n";
+//	if (operation == "/")
+//		cout << "The result is: " << operand1 / operand2 << "\n";
+//	else
+//		cout << "The operation entered is not recognized by the program!\n";
+//	keep_windy();
+//}
+
+// cents conversion
+
 int main() {
-	cout << "Enter operation followed by operands: \n";
-	string operation = " ";
-	double operand1 = 0.0;
-	double operand2 = 0.0;
-	cin >> operation >> operand1 >> operand2;
-	if (operation == "+")
-		cout << "The result is: " << operand1 + operand2 << "\n";
-	if (operation == "*")
-		cout << "The result is: " << operand1 * operand2 << "\n";
-	if (operation == "-")
-		cout << "The result is: " << operand1 - operand2 << "\n";
-	if (operation == "/")
-		cout << "The result is: " << operand1 / operand2 << "\n";
+	cout << "How many pennies do you have?\n";
+	double penny = 0;
+	cin >> penny;
+	if (penny > 1)
+		cout << "You have " << penny << " pennies.\n";
 	else
-		cout << "The operation entered is not recognized by the program!\n";
+		cout << "You have " << penny << " penny.\n";
+
+	cout << "How many nickels do you have?\n";
+	double nickel = 0;
+	cin >> nickel;
+	if (nickel > 1)
+		cout << "You have " << nickel << " nickels.\n";
+	else
+		cout << "You have " << nickel << " nickel.\n";
+	
+	cout << "How many dimes do you have?\n";
+	double dime = 0;
+	cin >> dime;
+	if (dime > 1)
+		cout << "You have " << dime << " dimes.\n";
+	else
+		cout << "You have " << dime << " dime.\n";
+	
+	cout << "How many quarters do you have?\n";
+	double quarter = 0;
+	cin >> quarter;
+	if (quarter > 1)
+		cout << "You have " << quarter << " quarters.\n";
+	else
+		cout << "You have " << quarter << " quarter.\n";
+	
+	cout << "How many half dollars do you have?\n";
+	double half_dollar = 0;
+	cin >> half_dollar;
+	if (half_dollar > 1)
+		cout << "You have " << half_dollar << " half dollars.\n";
+	else
+		cout << "You have " << half_dollar << " half dollar.\n";
+	double total_cents = (penny)+(nickel * 5) + (dime * 10) + (quarter * 25) + (half_dollar * 50);
+	if (total_cents >= 100)
+		cout << "The value of all of your coins is $" << total_cents / 100 << ".\n";
+	if (total_cents > 1 and total_cents < 100)
+		cout << "The value of all of your coins is " << total_cents << " cents.\n";
+	if (total_cents < 1)
+		cout << "The value of all of your coins is " << total_cents << " cent.\n";
 	keep_windy();
+
+
 }
