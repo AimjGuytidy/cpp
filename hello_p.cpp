@@ -189,7 +189,7 @@ inline void keep_windy() { char ch; cin >> ch; }
 
 // unsafe conversions
 
-int main() {
+/*int main() {
 	int a = 2000;
 	char b = a;
 	int c = b;
@@ -197,4 +197,73 @@ int main() {
 		cout << "Ouups!: " << a << " != " << c;
 	else
 		cout << "we have a great reader!";
+}*/ // this type of conversion is called narrowing conversion
+
+// example
+
+//int main() {
+//	double d = 0;
+//	while (cin >> d) {
+//		int i = d;
+//		char c = i;
+//		int k = c;
+//		cout << "\nd == " << d
+//			<< "\ni == " << i
+//			<< "\nc == " << c
+//			<< "\nk == " << k
+//			<< "\nchar( " << c << " )\n";
+//	}
+//
+//}
+
+// use {} initializers to avoid narrowing!!
+// {}: universal and uniform initialization
+
+
+// end of chapter drill and exercises
+
+int main() {
+	cout << "Enter the name of the person you want to write to: \n";
+	string first_name;
+	cin >> first_name;
+	cout << "Dear " << first_name << ",\n"
+		<< "How are you? I am fine. I miss you.\n"
+		<< "Last night, I dreamt about the good times we had.\n";
+	cout << "Enter the name of your other friend: \n";
+	string friend_name;
+	cin >> friend_name;
+	cout << "\nHave you seen " << friend_name << " lately?\n";
+	char friend_sex = '0';
+	cout << "\nEnter friend sex (m if male and f if female): ";
+	cin >> friend_sex;
+	if (friend_sex == 'm')
+		cout << "If you see " << friend_name << " please ask him to call me.\n";
+	if (friend_sex == 'f')
+		cout << "If you see " << friend_name << " please ask her to call me.\n";
+	cout << "\nEnter the age of the recipient: \n";
+	int age = 0;
+	cin >> age;
+	if (age > 0 and age < 110) {
+		cout << "\nI hear you just had a birthday and you are "
+		<< age << " years old.";
+	if (age < 12 and age > 0) {
+		cout << "\nNext year you will be "
+		<< age + 1
+		<< ".";
+
+	}
+	if (age == 17) {
+		cout << "\nNext year you will be able to vote.";
+	}
+	if (age > 70 and age < 110) {
+		cout << "\nI hope you are enjoying retirement.";
+	}
+	}
+	else
+		cout << "\nyou're kidding! ";
+	cout << "\nYours sincerely,"
+		<< "\n"
+		<< "\n"
+		<< "Parfait";
+	keep_windy();
 }
