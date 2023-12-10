@@ -157,11 +157,11 @@ inline void keep_windy() { char ch; cin >> ch; }
 
 // Names
 
-int main() {
-	string s = "Goodbye, cruel world!";
-	cout << s << "\n";
-	return 0;
-}
+//int main() {
+//	string s = "Goodbye, cruel world!";
+//	cout << s << "\n";
+//	return 0;
+//}
 
 // Types and objects
 
@@ -174,3 +174,27 @@ int main() {
 
 // Type safety
 
+// always initialize variables!
+
+
+
+// Safe conversions
+
+//int main() {
+//	char c = 'x';
+//	int int1 = c;
+//	char c1 = int1;
+//	cout << c << int1 << c1;
+//}
+
+// unsafe conversions
+
+int main() {
+	int a = 2000;
+	char b = a;
+	int c = b;
+	if (a != b)
+		cout << "Ouups!: " << a << " != " << c;
+	else
+		cout << "we have a great reader!";
+}
