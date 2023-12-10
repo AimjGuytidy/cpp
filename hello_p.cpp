@@ -222,48 +222,117 @@ inline void keep_windy() { char ch; cin >> ch; }
 
 // end of chapter drill and exercises
 
-int main() {
-	cout << "Enter the name of the person you want to write to: \n";
-	string first_name;
-	cin >> first_name;
-	cout << "Dear " << first_name << ",\n"
-		<< "How are you? I am fine. I miss you.\n"
-		<< "Last night, I dreamt about the good times we had.\n";
-	cout << "Enter the name of your other friend: \n";
-	string friend_name;
-	cin >> friend_name;
-	cout << "\nHave you seen " << friend_name << " lately?\n";
-	char friend_sex = '0';
-	cout << "\nEnter friend sex (m if male and f if female): ";
-	cin >> friend_sex;
-	if (friend_sex == 'm')
-		cout << "If you see " << friend_name << " please ask him to call me.\n";
-	if (friend_sex == 'f')
-		cout << "If you see " << friend_name << " please ask her to call me.\n";
-	cout << "\nEnter the age of the recipient: \n";
-	int age = 0;
-	cin >> age;
-	if (age > 0 and age < 110) {
-		cout << "\nI hear you just had a birthday and you are "
-		<< age << " years old.";
-	if (age < 12 and age > 0) {
-		cout << "\nNext year you will be "
-		<< age + 1
-		<< ".";
+//int main() {
+//	cout << "Enter the name of the person you want to write to: \n";
+//	string first_name;
+//	cin >> first_name;
+//	cout << "Dear " << first_name << ",\n"
+//		<< "How are you? I am fine. I miss you.\n"
+//		<< "Last night, I dreamt about the good times we had.\n";
+//	cout << "Enter the name of your other friend: \n";
+//	string friend_name;
+//	cin >> friend_name;
+//	cout << "\nHave you seen " << friend_name << " lately?\n";
+//	char friend_sex = '0';
+//	cout << "\nEnter friend sex (m if male and f if female): ";
+//	cin >> friend_sex;
+//	if (friend_sex == 'm')
+//		cout << "If you see " << friend_name << " please ask him to call me.\n";
+//	if (friend_sex == 'f')
+//		cout << "If you see " << friend_name << " please ask her to call me.\n";
+//	cout << "\nEnter the age of the recipient: \n";
+//	int age = 0;
+//	cin >> age;
+//	if (age > 0 and age < 110) {
+//		cout << "\nI hear you just had a birthday and you are "
+//		<< age << " years old.";
+//	if (age < 12 and age > 0) {
+//		cout << "\nNext year you will be "
+//		<< age + 1
+//		<< ".";
+//
+//	}
+//	if (age == 17) {
+//		cout << "\nNext year you will be able to vote.";
+//	}
+//	if (age > 70 and age < 110) {
+//		cout << "\nI hope you are enjoying retirement.";
+//	}
+//	}
+//	else
+//		cout << "\nyou're kidding! ";
+//	cout << "\nYours sincerely,"
+//		<< "\n"
+//		<< "\n"
+//		<< "Parfait";
+//	keep_windy();
+//}
 
-	}
-	if (age == 17) {
-		cout << "\nNext year you will be able to vote.";
-	}
-	if (age > 70 and age < 110) {
-		cout << "\nI hope you are enjoying retirement.";
-	}
+// m-to-km converter
+/*int main() {
+	cout << "Enter a number of miles: \n";
+	double miles_entered = 0.0;
+	cin >> miles_entered;
+	cout << "\nMiles entered ( "
+		<< miles_entered
+		<< " miles ) are equivalent to "
+		<< miles_entered * 1.609
+		<< " km.";
+	keep_windy();
+}*/
+
+// program that doesn't do anything
+/*
+int main() {
+	//int double = 0;
+	int doubl = 0;
+}
+*/
+
+// program that compare 2 integer variables
+int main() {
+	cout << "Enter 2 integers: \n";
+	int val1 = 0;
+	int val2 = 0;
+	cin >> val1
+		>> val2;
+	if (val1 != val2) {
+		if (val1 > val2)
+			cout << val1
+			<< " is greater than "
+			<< val2
+			<< ". thus it is the largest and "
+			<< val2
+			<< " is the smallest.\n";
+		else
+			cout << val1
+			<< " is less than "
+			<< val2
+			<< ". thus it is the smallest and "
+			<< val2
+			<< " is the largest.\n";
 	}
 	else
-		cout << "\nyou're kidding! ";
-	cout << "\nYours sincerely,"
-		<< "\n"
-		<< "\n"
-		<< "Parfait";
+		cout << val1
+		<< " is equal to "
+		<< val2
+		<< ".\n";
+	cout << "\nthe sum is "
+		<< val1 + val2
+		<< ".\n"
+		<< "\nthe difference is "
+		<< abs(val1 - val2)
+		<< ".\n"
+		<< "\nthe product is "
+		<< val1 * val2
+		<< ".\n";
+	double ratio = val1/val2;
+
+	cout << "\nthe ratio is "
+		<< ratio
+		<< ".\n";
 	keep_windy();
+
+		
+
 }
