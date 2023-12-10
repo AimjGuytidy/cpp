@@ -402,25 +402,38 @@ int main() {
 //	
 //}
 
+//
+//int main() {
+//	cout << "Please enter 3 words: \n";
+//	string i1 = " ";
+//	string i2 = " ";
+//	string i3 = " ";
+//	cin >> i1 >> i2 >> i3;
+//	if (i1 >= i2 and i2 >= i3)
+//		cout << i1 << ", " << i2 << ", " << i3 << "\n";
+//	if (i1 <= i2 and i2 <= i3)
+//		cout << i3 << ", " << i2 << ", " << i1 << "\n";
+//	if (i1 >= i3 and i3 >= i2)
+//		cout << i1 << ", " << i3 << ", " << i2 << "\n";
+//	if (i1 <= i3 and i3 <= i2)
+//		cout << i2 << ", " << i3 << ", " << i1 << "\n";
+//	if (i1 <= i2 and i1 >= i3)
+//		cout << i2 << ", " << i1 << ", " << i3 << "\n";
+//	if (i3 >= i1 and i1 >= i2)
+//		cout << i3 << ", " << i1 << ", " << i2 << "\n";
+//	keep_windy();
+//
+//}
+
+// Testing odd or even integers
 
 int main() {
-	cout << "Please enter 3 words: \n";
-	string i1 = " ";
-	string i2 = " ";
-	string i3 = " ";
-	cin >> i1 >> i2 >> i3;
-	if (i1 >= i2 and i2 >= i3)
-		cout << i1 << ", " << i2 << ", " << i3 << "\n";
-	if (i1 <= i2 and i2 <= i3)
-		cout << i3 << ", " << i2 << ", " << i1 << "\n";
-	if (i1 >= i3 and i3 >= i2)
-		cout << i1 << ", " << i3 << ", " << i2 << "\n";
-	if (i1 <= i3 and i3 <= i2)
-		cout << i2 << ", " << i3 << ", " << i1 << "\n";
-	if (i1 <= i2 and i1 >= i3)
-		cout << i2 << ", " << i1 << ", " << i3 << "\n";
-	if (i3 >= i1 and i1 >= i2)
-		cout << i3 << ", " << i1 << ", " << i2 << "\n";
+	cout << " Please enter an integer: \n";
+	int  i1 = 0;
+	cin >> i1;
+	if (i1 % 2 == 0)
+		cout << "The value " << i1 << " is an even number.\n";
+	else
+		cout << "The value " << i1 << " is an odd number.\n";
 	keep_windy();
-
 }
