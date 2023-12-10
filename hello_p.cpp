@@ -290,7 +290,7 @@ int main() {
 */
 
 // program that compare 2 integer variables
-int main() {
+/*int main() {
 	cout << "Enter 2 integers: \n";
 	int val1 = 0;
 	int val2 = 0;
@@ -332,7 +332,95 @@ int main() {
 		<< ratio
 		<< ".\n";
 	keep_windy();
+}*/
 
-		
+//int main() {
+//	cout << "Enter 2 numbers: \n";
+//	double val1 = 0.0;
+//	double val2 = 0.0;
+//	cin >> val1
+//		>> val2;
+//	if (val1 != val2) {
+//		if (val1 > val2)
+//			cout << val1
+//			<< " is greater than "
+//			<< val2
+//			<< ". thus it is the largest and "
+//			<< val2
+//			<< " is the smallest.\n";
+//		else
+//			cout << val1
+//			<< " is less than "
+//			<< val2
+//			<< ". thus it is the smallest and "
+//			<< val2
+//			<< " is the largest.\n";
+//	}
+//	else
+//		cout << val1
+//		<< " is equal to "
+//		<< val2
+//		<< ".\n";
+//	cout << "\nthe sum is "
+//		<< val1 + val2
+//		<< ".\n"
+//		<< "\nthe difference is "
+//		<< abs(val1 - val2)
+//		<< ".\n"
+//		<< "\nthe product is "
+//		<< val1 * val2
+//		<< ".\n";
+//	double ratio = val1 / val2;
+//
+//	cout << "\nthe ratio is "
+//		<< ratio
+//		<< ".\n";
+//	keep_windy();
+//}
+
+// sorting numbers
+
+//int main() {
+//	cout << "Please enter 3 integers: \n";
+//	int i1 = 0;
+//	int i2 = 0;
+//	int i3 = 0;
+//	cin >> i1 >> i2 >> i3;
+//	if (i1 >= i2 and i2 >= i3)
+//		cout << i1 << ", " << i2 << ", " << i3 << "\n";
+//	if (i1 <= i2 and i2 <= i3)
+//		cout << i3 << ", " << i2 << ", " << i1 << "\n";
+//	if (i1 >= i3 and i3 >= i2)
+//		cout << i1 << ", " << i3 << ", " << i2 << "\n";
+//	if (i1 <= i3 and i3 <= i2)
+//		cout << i2 << ", " << i3 << ", " << i1 << "\n";
+//	if (i1 <= i2 and i1 >= i3)
+//		cout << i2 << ", " << i1 << ", " << i3 << "\n";
+//	if (i3 >= i1 and i1 >= i2)
+//		cout << i3 << ", " << i1 << ", " << i2 << "\n";
+//	keep_windy();
+//	
+//}
+
+
+int main() {
+	cout << "Please enter 3 words: \n";
+	string i1 = " ";
+	string i2 = " ";
+	string i3 = " ";
+	cin >> i1 >> i2 >> i3;
+	if (i1 >= i2 and i2 >= i3)
+		cout << i1 << ", " << i2 << ", " << i3 << "\n";
+	if (i1 <= i2 and i2 <= i3)
+		cout << i3 << ", " << i2 << ", " << i1 << "\n";
+	if (i1 >= i3 and i3 >= i2)
+		cout << i1 << ", " << i3 << ", " << i2 << "\n";
+	if (i1 <= i3 and i3 <= i2)
+		cout << i2 << ", " << i3 << ", " << i1 << "\n";
+	if (i1 <= i2 and i1 >= i3)
+		cout << i2 << ", " << i1 << ", " << i3 << "\n";
+	if (i3 >= i1 and i1 >= i2)
+		cout << i3 << ", " << i1 << ", " << i2 << "\n";
+	keep_windy();
 
 }
