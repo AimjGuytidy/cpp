@@ -440,21 +440,42 @@ int main() {
 
 // converting spelled out numbers
 
+//int main() {
+//	cout << "Please enter a spelled out number: \n";
+//	string s1 = " ";
+//	cin >> s1;
+//	if (s1 == "zero")
+//		cout << "The digit equivalent is 0.\n";
+//	if (s1 == "one")
+//		cout << "The digit equivalent is 1.\n";
+//	if (s1 == "two")
+//		cout << "The digit equivalent is 2.\n";
+//	if (s1 == "three")
+//		cout << "The digit equivalent is 3.\n";
+//	if (s1 == "four")
+//		cout << "The digit equivalent is 4.\n";
+//	else
+//		cout << "not a number I know!\n";
+//	keep_windy();
+//}
+
+// operations and operands
+
 int main() {
-	cout << "Please enter a spelled out number: \n";
-	string s1 = " ";
-	cin >> s1;
-	if (s1 == "zero")
-		cout << "The digit equivalent is 0.\n";
-	if (s1 == "one")
-		cout << "The digit equivalent is 1.\n";
-	if (s1 == "two")
-		cout << "The digit equivalent is 2.\n";
-	if (s1 == "three")
-		cout << "The digit equivalent is 3.\n";
-	if (s1 == "four")
-		cout << "The digit equivalent is 4.\n";
+	cout << "Enter operation followed by operands: \n";
+	string operation = " ";
+	double operand1 = 0.0;
+	double operand2 = 0.0;
+	cin >> operation >> operand1 >> operand2;
+	if (operation == "+")
+		cout << "The result is: " << operand1 + operand2 << "\n";
+	if (operation == "*")
+		cout << "The result is: " << operand1 * operand2 << "\n";
+	if (operation == "-")
+		cout << "The result is: " << operand1 - operand2 << "\n";
+	if (operation == "/")
+		cout << "The result is: " << operand1 / operand2 << "\n";
 	else
-		cout << "not a number I know!\n";
+		cout << "The operation entered is not recognized by the program!\n";
 	keep_windy();
 }
