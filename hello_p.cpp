@@ -482,54 +482,118 @@ int main() {
 
 // cents conversion
 
+//int main() {
+//	cout << "How many pennies do you have?\n";
+//	double penny = 0;
+//	cin >> penny;
+//	if (penny > 1)
+//		cout << "You have " << penny << " pennies.\n";
+//	else
+//		cout << "You have " << penny << " penny.\n";
+//
+//	cout << "How many nickels do you have?\n";
+//	double nickel = 0;
+//	cin >> nickel;
+//	if (nickel > 1)
+//		cout << "You have " << nickel << " nickels.\n";
+//	else
+//		cout << "You have " << nickel << " nickel.\n";
+//	
+//	cout << "How many dimes do you have?\n";
+//	double dime = 0;
+//	cin >> dime;
+//	if (dime > 1)
+//		cout << "You have " << dime << " dimes.\n";
+//	else
+//		cout << "You have " << dime << " dime.\n";
+//	
+//	cout << "How many quarters do you have?\n";
+//	double quarter = 0;
+//	cin >> quarter;
+//	if (quarter > 1)
+//		cout << "You have " << quarter << " quarters.\n";
+//	else
+//		cout << "You have " << quarter << " quarter.\n";
+//	
+//	cout << "How many half dollars do you have?\n";
+//	double half_dollar = 0;
+//	cin >> half_dollar;
+//	if (half_dollar > 1)
+//		cout << "You have " << half_dollar << " half dollars.\n";
+//	else
+//		cout << "You have " << half_dollar << " half dollar.\n";
+//	double total_cents = (penny)+(nickel * 5) + (dime * 10) + (quarter * 25) + (half_dollar * 50);
+//	if (total_cents >= 100)
+//		cout << "The value of all of your coins is $" << total_cents / 100 << ".\n";
+//	if (total_cents > 1 and total_cents < 100)
+//		cout << "The value of all of your coins is " << total_cents << " cents.\n";
+//	if (total_cents < 1)
+//		cout << "The value of all of your coins is " << total_cents << " cent.\n";
+//	keep_windy();
+//
+//
+//}
+
+// chapter 4: computation
+
+// computation
+
+// inputs : arguments
+// outputs : results
+// computation: act of producing outputs based on a set of inputs
+
+// Objectives and tools
+
+// correctly; simply; efficiently
+
+// Expressions
+
+//int main() {
+//	int length = 20; // a literal integer
+//	int width = 40; // put 40 into the object named by "width"
+//	int area = length * width;
+//	cin >> length >> width;
+//	cout << "The area is " << area << ".\n";
+//	keep_windy();
+//}
+
+// // constant expressions
+
+//constexpr double pi = 3.14159265359; // a literal is a constant expression
+// magic constants: non-obvious literals in code!! 
+// use const for variables that are not constant expressions but don't change values
+// after initialization.
+
+// // operators
+
+
+// // conversions
+//int main() {
+//	double d = 2.5;
+//	int i = 3;
+//	cout << d / i << " " << 'a' + 1;
+//}
+
+// type{value} avoids narrowing
+// type(value) converts with narrowing risk
+
+//int main() {
+//	double d = 2.5;
+//	int i = 2;
+//
+//	double d2 = d / i; // this means that i becomes double(i)
+//	int i2 = d / i; // here there will be narrowing d becomes 2
+//	//int i3{ d / i }; // error due to narrowing
+//
+//	i2 = d / i;
+//	d2 = d / i;
+//	cout << "integer: " << i2 << " double: " << d2;
+//}
+
 int main() {
-	cout << "How many pennies do you have?\n";
-	double penny = 0;
-	cin >> penny;
-	if (penny > 1)
-		cout << "You have " << penny << " pennies.\n";
-	else
-		cout << "You have " << penny << " penny.\n";
-
-	cout << "How many nickels do you have?\n";
-	double nickel = 0;
-	cin >> nickel;
-	if (nickel > 1)
-		cout << "You have " << nickel << " nickels.\n";
-	else
-		cout << "You have " << nickel << " nickel.\n";
-	
-	cout << "How many dimes do you have?\n";
-	double dime = 0;
-	cin >> dime;
-	if (dime > 1)
-		cout << "You have " << dime << " dimes.\n";
-	else
-		cout << "You have " << dime << " dime.\n";
-	
-	cout << "How many quarters do you have?\n";
-	double quarter = 0;
-	cin >> quarter;
-	if (quarter > 1)
-		cout << "You have " << quarter << " quarters.\n";
-	else
-		cout << "You have " << quarter << " quarter.\n";
-	
-	cout << "How many half dollars do you have?\n";
-	double half_dollar = 0;
-	cin >> half_dollar;
-	if (half_dollar > 1)
-		cout << "You have " << half_dollar << " half dollars.\n";
-	else
-		cout << "You have " << half_dollar << " half dollar.\n";
-	double total_cents = (penny)+(nickel * 5) + (dime * 10) + (quarter * 25) + (half_dollar * 50);
-	if (total_cents >= 100)
-		cout << "The value of all of your coins is $" << total_cents / 100 << ".\n";
-	if (total_cents > 1 and total_cents < 100)
-		cout << "The value of all of your coins is " << total_cents << " cents.\n";
-	if (total_cents < 1)
-		cout << "The value of all of your coins is " << total_cents << " cent.\n";
-	keep_windy();
-
-
+	// converting celsius to fahrenheit
+	double dc;
+	cin >> dc;
+	double df = 9 / 5.0 * dc + 32;// make sure one of 9 or 5 is a double type
+	cout << "\n" << dc << " degrees celsius are equivalent to degree fahrenheit " << df;
 }
