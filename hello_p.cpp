@@ -617,18 +617,44 @@ int main() {
 //	keep_windy();
 //}
 
-int main() {
-	constexpr double cm_per_inch = 2.54;
-	double length = 1;
-	char unit = ' ';
+//int main() {
+//	constexpr double cm_per_inch = 2.54;
+//	double length = 1;
+//	char unit = ' ';
+//
+//	cout << "Please enter length and unit (c or i): \n";
+//	cin >> length >> unit;
+//	if (unit == 'i')
+//		cout << "length == " << length * cm_per_inch << " cm.\n";
+//	else if (unit == 'c') // this doesn't mean else-if! it means else statement with if nested!!!
+//		cout << "length == " << length / cm_per_inch << " in.\n";
+//	else
+//		cout << "Sorry, I don't know a unit called " << unit << ".\n";
+//	keep_windy();
+//}
 
-	cout << "Please enter length and unit (c or i): \n";
-	cin >> length >> unit;
-	if (unit == 'i')
-		cout << "length == " << length * cm_per_inch << " cm.\n";
-	else if (unit == 'c')
-		cout << "length == " << length / cm_per_inch << " in.\n";
+// currency conversion
+
+int main() {
+	constexpr double yen_to_dollars = 0.0068;
+	constexpr double euro_to_dollars = 1.08;
+	constexpr double pound_to_dollars = 1.26;
+	double amount = 0;
+	char currency = ' ';
+	cout << "Please enter amount and currency (y,e or p): \n";
+	cin >> amount >> currency;
+	if (currency == 'y')
+		cout << fixed
+			 << amount << " yens are equivalent to " << amount * yen_to_dollars << " dollars.\n";
+	else if (currency == 'e')
+		cout << fixed
+			 << amount << " euros are equivalent to " << amount * euro_to_dollars << " dollars.\n";
+	else if (currency == 'p')
+		cout << fixed
+			 << amount << " pounds are equivalent to " << amount * pound_to_dollars << " pounds.\n";
 	else
-		cout << "Sorry, I don't know a unit called " << unit << ".\n";
+		cout << fixed
+			 << "the currency " << currency << " used is not known by the program!\n";
 	keep_windy();
+
 }
