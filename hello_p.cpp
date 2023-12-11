@@ -635,6 +635,31 @@ int main() {
 
 // currency conversion
 
+//int main() {
+//	constexpr double yen_to_dollars = 0.0068;
+//	constexpr double euro_to_dollars = 1.08;
+//	constexpr double pound_to_dollars = 1.26;
+//	double amount = 0;
+//	char currency = ' ';
+//	cout << "Please enter amount and currency (y,e or p): \n";
+//	cin >> amount >> currency;
+//	if (currency == 'y')
+//		cout << fixed
+//			 << amount << " yens are equivalent to " << amount * yen_to_dollars << " dollars.\n";
+//	else if (currency == 'e')
+//		cout << fixed
+//			 << amount << " euros are equivalent to " << amount * euro_to_dollars << " dollars.\n";
+//	else if (currency == 'p')
+//		cout << fixed
+//			 << amount << " pounds are equivalent to " << amount * pound_to_dollars << " pounds.\n";
+//	else
+//		cout << fixed
+//			 << "the currency " << currency << " used is not known by the program!\n";
+//	keep_windy();
+//
+//}
+
+// // // switch-statements
 int main() {
 	constexpr double yen_to_dollars = 0.0068;
 	constexpr double euro_to_dollars = 1.08;
@@ -643,18 +668,23 @@ int main() {
 	char currency = ' ';
 	cout << "Please enter amount and currency (y,e or p): \n";
 	cin >> amount >> currency;
-	if (currency == 'y')
+	switch(currency) {
+	case 'y':
 		cout << fixed
 			 << amount << " yens are equivalent to " << amount * yen_to_dollars << " dollars.\n";
-	else if (currency == 'e')
+		break;
+	case 'e':
 		cout << fixed
 			 << amount << " euros are equivalent to " << amount * euro_to_dollars << " dollars.\n";
-	else if (currency == 'p')
+		break;
+	case 'p':
 		cout << fixed
 			 << amount << " pounds are equivalent to " << amount * pound_to_dollars << " pounds.\n";
-	else
+		break;
+	default:
 		cout << fixed
 			 << "the currency " << currency << " used is not known by the program!\n";
+		break;
+	}
 	keep_windy();
-
 }
