@@ -590,10 +590,45 @@ int main() {
 //	cout << "integer: " << i2 << " double: " << d2;
 //}
 
+//int main() {
+//	// converting celsius to fahrenheit
+//	double dc;
+//	cin >> dc;
+//	double df = 9 / 5.0 * dc + 32;// make sure one of 9 or 5 is a double type
+//	cout << "\n" << dc << " degrees celsius are equivalent to degree fahrenheit " << df;
+//}
+
+// Statements
+
+// empty statement eg: if (x == 5); the semicolon makes it empty
+
+// // selection
+// // // if-statements
+
+//int main() {
+//	int a = 0; // initialization
+//	int b = 0; // initialization
+//	cout << "Enter two different integers: \n";
+//	cin >> a >> b;
+//	if (a > b)
+//		cout << "max(" << a << ", " << b << ") = " << a;
+//	else
+//		cout << "max(" << a << ", " << b << ") = " << b;
+//	keep_windy();
+//}
+
 int main() {
-	// converting celsius to fahrenheit
-	double dc;
-	cin >> dc;
-	double df = 9 / 5.0 * dc + 32;// make sure one of 9 or 5 is a double type
-	cout << "\n" << dc << " degrees celsius are equivalent to degree fahrenheit " << df;
+	constexpr double cm_per_inch = 2.54;
+	double length = 1;
+	char unit = ' ';
+
+	cout << "Please enter length and unit (c or i): \n";
+	cin >> length >> unit;
+	if (unit == 'i')
+		cout << "length == " << length * cm_per_inch << " cm.\n";
+	else if (unit == 'c')
+		cout << "length == " << length / cm_per_inch << " in.\n";
+	else
+		cout << "Sorry, I don't know a unit called " << unit << ".\n";
+	keep_windy();
 }
