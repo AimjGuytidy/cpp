@@ -660,31 +660,77 @@ int main() {
 //}
 
 // // // switch-statements
+
+//int main() {
+//	constexpr double yen_to_dollars = 0.0068;
+//	constexpr double euro_to_dollars = 1.08;
+//	constexpr double pound_to_dollars = 1.26;
+//	double amount = 0;
+//	char currency = ' ';
+//	cout << "Please enter amount and currency (y,e or p): \n";
+//	cin >> amount >> currency;
+//	switch(currency) {
+//	case 'y':
+//		cout << fixed
+//			 << amount << " yens are equivalent to " << amount * yen_to_dollars << " dollars.\n";
+//		break;
+//	case 'e':
+//		cout << fixed
+//			 << amount << " euros are equivalent to " << amount * euro_to_dollars << " dollars.\n";
+//		break;
+//	case 'p':
+//		cout << fixed
+//			 << amount << " pounds are equivalent to " << amount * pound_to_dollars << " pounds.\n";
+//		break;
+//	default:
+//		cout << fixed
+//			 << "the currency " << currency << " used is not known by the program!\n";
+//		break;
+//	}
+//	keep_windy();
+//}
+
+// // // // switch technicalities
+
+// you can't switch on a string (must be int, char or enumerate)
+// you can't use a variable in a case label!
+// you can't use the same case label twice
+// you can use several case labels for single case
+// use break; at the end of each case
+
+// use of several cases
+
+//int main() {
+//	char a = ' ';
+//	cout << "Please enter a digit: \n";
+//	cin >> a;
+//	switch (a)
+//	{
+//	case '0': case '2': case '4': case '6': case '8':
+//		cout << "You have entered an even number.\n";
+//		break;
+//	case '1': case '3': case '5': case '7': case '9':
+//		cout << "You have entered an odd number.\n";
+//		break;
+//	default:
+//		cout << "You did not enter a digit!\n";
+//		break;
+//	}
+//	keep_windy();
+//}
+
+// // iteration
+
+// // // while-statements
+
 int main() {
-	constexpr double yen_to_dollars = 0.0068;
-	constexpr double euro_to_dollars = 1.08;
-	constexpr double pound_to_dollars = 1.26;
-	double amount = 0;
-	char currency = ' ';
-	cout << "Please enter amount and currency (y,e or p): \n";
-	cin >> amount >> currency;
-	switch(currency) {
-	case 'y':
-		cout << fixed
-			 << amount << " yens are equivalent to " << amount * yen_to_dollars << " dollars.\n";
-		break;
-	case 'e':
-		cout << fixed
-			 << amount << " euros are equivalent to " << amount * euro_to_dollars << " dollars.\n";
-		break;
-	case 'p':
-		cout << fixed
-			 << amount << " pounds are equivalent to " << amount * pound_to_dollars << " pounds.\n";
-		break;
-	default:
-		cout << fixed
-			 << "the currency " << currency << " used is not known by the program!\n";
-		break;
+	cout << " A program to print a simple list of squares: \n";
+	int i = 0;
+	while (i < 100)
+	{
+		cout << "\n" << i << "^2 == " << i * i;
+		++i;
 	}
 	keep_windy();
+
 }
