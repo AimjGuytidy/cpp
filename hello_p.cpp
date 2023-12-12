@@ -793,7 +793,37 @@ int square(int x) { // create a function to calculate squares!
 	return x * x;
 }
 
-int main() {
-	cout << "The square of 2 is " << square(2) << ".\n"; // using the created function.
+//int main() {
+//	cout << "The square of 2 is " << square(2) << ".\n"; // using the created function.
+//}
+
+// type identifier (parameter-list) function-body
+
+// function that returns nothing
+
+void nono() {
+	cout << "Nothing to return!\n";
 }
 
+//int main() {
+//	nono();
+//}
+
+// // why bother with functions
+
+double sqrt_par(double x) {
+	for (double t = 0; t < 10000000000; ++t)
+	{
+		if (t * t == x) {
+			return t;
+		}
+	}
+}
+
+int main() {
+	for (int i = 0; i < 32; ++i)
+	{
+		cout << fixed
+			 << i << "\t" << sqrt_par(i) << "\n";
+	}
+}
