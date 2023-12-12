@@ -775,12 +775,25 @@ int main() {
 
 // exercise
 
-int main() {
-	for (int i = 0; i < 26; ++i) {
-		cout << char('a' + i) << "\t" << int('a' + i) << "\n";
-	}
-	cout << "\n";
-	for (int i = 0; i < 26; ++i) {
-		cout << char('A' + i) << "\t" << int('A' + i) << "\n";
-	}
+//int main() {
+//	for (int i = 0; i < 26; ++i) {
+//		cout << char('a' + i) << "\t" << int('a' + i) << "\n";
+//	}
+//	cout << "\n";
+//	for (int i = 0; i < 26; ++i) {
+//		cout << char('A' + i) << "\t" << int('A' + i) << "\n";
+//	}
+//}
+
+// Functions
+
+// function: a named sequence of statements
+
+int square(int x) { // create a function to calculate squares!
+	return x * x;
 }
+
+int main() {
+	cout << "The square of 2 is " << square(2) << ".\n"; // using the created function.
+}
+
