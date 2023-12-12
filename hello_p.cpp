@@ -811,19 +811,62 @@ void nono() {
 
 // // why bother with functions
 
-double sqrt_par(double x) {
-	for (double t = 0; t < 10000000000; ++t)
-	{
-		if (t * t == x) {
-			return t;
-		}
+// attempting to write a square root function
+
+//double sqrt_par(double x) {
+//	for (double t = 0; t < 10000000000; ++t)
+//	{
+//		if (t * t == x) {
+//			return t;
+//		}
+//	}
+//}
+//
+//int main() {
+//	for (int i = 0; i < 32; ++i)
+//	{
+//		cout << fixed
+//			 << i << "\t" << sqrt_par(i) << "\n";
+//	}
+//}
+
+// simplified square loop
+
+// create a void function to print squares
+
+void print_squares(int v) {
+	cout << v << "\t" << v * v << "\n";
+}
+
+//int main() {
+//	for (int i = 0; i < 100; ++i) print_squares(i);
+//}
+
+// try this : square function the archaic way!
+int sqq(int x) {
+	const int temp = x;
+	if (x == 0) {
+		return 0;
 	}
+	else if (x == 1) {
+		return 1;
+	}
+	else if (x == 2) {
+		return 4;
+	}
+	else 
+	{
+		for (int i = 0; i < (temp - 1); ++i)
+		{
+			x += temp;
+		}
+		return x;
+	}
+	
 }
 
 int main() {
-	for (int i = 0; i < 32; ++i)
-	{
-		cout << fixed
-			 << i << "\t" << sqrt_par(i) << "\n";
+	for (int i = 0; i < 9; ++i) {
+		cout << i << "\t" << sqq(i) << "\n";
 	}
 }
