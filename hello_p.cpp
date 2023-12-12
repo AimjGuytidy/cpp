@@ -755,12 +755,19 @@ int main() {
 
 // // for statements
 
-int main() {
-	
-	for (int i = 0; i < 100; ++i) {
-		cout << i << "\t" << i * i << "\n";
-	}
-}
+//int main() {
+//	
+//	for (int i = 0; i < 100; ++i) {
+//		cout << i << "\t" << i * i << "\n";
+//	}
+//}
 
 // a for-statement is always equivalent to a while statement.
 
+int main() {
+
+	for (int i = 0; i < 100; ++i) {
+		cout << i << "\t" << i * i << "\n";
+		++i; // this would mean we only consider even numbers?
+	}
+}
