@@ -764,10 +764,23 @@ int main() {
 
 // a for-statement is always equivalent to a while statement.
 
-int main() {
+//int main() {
+//
+//	for (int i = 0; i < 100; ++i) {
+//		cout << i << "\t" << i * i << "\n";
+//		++i; // this would mean we only consider even numbers?
+//	}
+//}
 
-	for (int i = 0; i < 100; ++i) {
-		cout << i << "\t" << i * i << "\n";
-		++i; // this would mean we only consider even numbers?
+
+// exercise
+
+int main() {
+	for (int i = 0; i < 26; ++i) {
+		cout << char('a' + i) << "\t" << int('a' + i) << "\n";
+	}
+	cout << "\n";
+	for (int i = 0; i < 26; ++i) {
+		cout << char('A' + i) << "\t" << int('A' + i) << "\n";
 	}
 }
