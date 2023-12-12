@@ -723,13 +723,25 @@ int main() {
 
 // // // while-statements
 
+//int main() {
+//	cout << " A program to print a simple list of squares: \n";
+//	int i = 0; // a loop variable initialized
+//	while (i < 100)
+//	{
+//		cout << "\n" << i << "^2 == " << i * i;
+//		++i; // increment the loop variable i
+//	}
+//	keep_windy();
+//
+//}
+
 int main() {
-	cout << " A program to print a simple list of squares: \n";
-	int i = 0;
-	while (i < 100)
+	cout << " A program to print alphabetic letters: \n";
+	int i = 0; // a loop variable initialized
+	while (i < 26)
 	{
-		cout << "\n" << i << "^2 == " << i * i;
-		++i;
+		cout << "\n" << char('a' + i) << "\t" << int('a' + i);
+		++i; // increment the loop variable i
 	}
 	keep_windy();
 
