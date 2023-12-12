@@ -735,14 +735,32 @@ int main() {
 //
 //}
 
-int main() {
-	cout << " A program to print alphabetic letters: \n";
-	int i = 0; // a loop variable initialized
-	while (i < 26)
-	{
-		cout << "\n" << char('a' + i) << "\t" << int('a' + i);
-		++i; // increment the loop variable i
-	}
-	keep_windy();
+// a program that displays alphabet letters and their numeric values
 
+//int main() {
+//	cout << " A program to print alphabetic letters: \n";
+//	int i = 0; // a loop variable initialized
+//	while (i < 26)
+//	{
+//		cout << "\n" << char('a' + i) << "\t" << int('a' + i);
+//		++i; // increment the loop variable i
+//	}
+//	keep_windy();
+//
+//}
+
+// // // blocks
+
+// block: a sequence of statements delimited by curly braces {}
+
+// // for statements
+
+int main() {
+	
+	for (int i = 0; i < 100; ++i) {
+		cout << i << "\t" << i * i << "\n";
+	}
 }
+
+// a for-statement is always equivalent to a while statement.
+
