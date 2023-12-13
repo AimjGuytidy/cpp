@@ -865,8 +865,32 @@ int sqq(int x) {
 	
 }
 
+//int main() {
+//	for (int i = 0; i < 9; ++i) {
+//		cout << i << "\t" << sqq(i) << "\n";
+//	}
+//}
+
+// // function declarations
+
+// eg: int square(int); // a declaration of square 
+// eg: double sqrt(double); // a declaration of square root
+
+// vector
+
+// vector: a sequence of elements that you can access by an index
+
 int main() {
-	for (int i = 0; i < 9; ++i) {
-		cout << i << "\t" << sqq(i) << "\n";
-	}
+	cout << "Examples of vectors: \n";
+	vector <int> v = { 2,4,6,8,10 };//even numbers vector initialized
+	vector <string> friends = { "Parfait", "Par", "Pape" };//string vector initialized
+	vector <int> ve(4);// initialized an empty integer vector of size 4
+	vector <string> vs(3);// initialized an empty string vector of size 3
+	cout << "\nLet's check out some values of the vectors: \n"
+		<< "\nthe third value of vector v is "
+		<< v[2] << "\n"
+		<< "\nthe first value of vector friend is "
+		<< friends[0];
+	keep_windy();
+
 }
