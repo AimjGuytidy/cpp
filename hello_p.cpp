@@ -898,12 +898,21 @@ int sqq(int x) {
 
 // // traversing a vector
 
-int main() {
-	vector <int> vi = { 1,2,4,3,21,53 }; // initialized a vector vi
-	cout << "Our vector is of size " << vi.size() << ".\n";
+//int main() {
+//	vector <int> vi = { 1,2,4,3,21,53 }; // initialized a vector vi
+//	cout << "Our vector is of size " << vi.size() << ".\n";
+//
+//	for (int i = 0; i < vi.size(); ++i) {
+//		cout << vi[i] << "\n";
+//	}
+//	keep_windy();
+//}
 
-	for (int i = 0; i < vi.size(); ++i) {
-		cout << vi[i] << "\n";
+
+int main() {
+	vector <string> vs = { "kaka", "pepe", "papa" };
+	for (string x : vs) {
+		cout << x << "\t";
 	}
 	keep_windy();
 }
