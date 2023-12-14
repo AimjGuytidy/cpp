@@ -926,26 +926,37 @@ int sqq(int x) {
 
 // object_name.member-function-call(argument-list)
 
+//int main() {
+//	vector <double> vd;
+//	double k = 0;
+//	double i = 0;
+//	double b = 0;
+//	cout << "before assigning values to vector vd, its size was " << vd.size() << ".\n"
+//		 << "\nnow enter 3 numeric values that we will assign to the vector vd: \n";
+//	cin >> k >> i >> b;
+//	vd.push_back(k);
+//	cout << "\nnow the size of vd becomes " << vd.size() << ".\n";
+//	vd.push_back(i);
+//	cout << "\nnow the size becomes " << vd.size() << "\n";
+//	vd.push_back(b);
+//	cout << "\nnow the size becomes " << vd.size() << "\n";
+//	for (double x : vd) {
+//		cout << "\n"
+//			<< x;
+//	}
+//	keep_windy();
+//
+//}
+
+// numeric example
+
 int main() {
-	vector <double> vd;
-	double k = 0;
-	double i = 0;
-	double b = 0;
-	cout << "before assigning values to vector vd, its size was " << vd.size() << ".\n"
-		 << "\nnow enter 3 numeric values that we will assign to the vector vd: \n";
-	cin >> k >> i >> b;
-	vd.push_back(k);
-	cout << "\nnow the size of vd becomes " << vd.size() << ".\n";
-	vd.push_back(i);
-	cout << "\nnow the size becomes " << vd.size() << "\n";
-	vd.push_back(b);
-	cout << "\nnow the size becomes " << vd.size() << "\n";
-	for (double x : vd) {
-		cout << "\n"
-			<< x;
+	vector <double> temps;
+	cout << "Enter temperatures in dc: \n";
+	for (double temp; cin >> temp;) {
+		temps.push_back(temp);
 	}
-	keep_windy();
-
-
-
+	for (double x : temps) {
+		cout << x << "\n";
+	}
 }
