@@ -880,17 +880,30 @@ int sqq(int x) {
 
 // vector: a sequence of elements that you can access by an index
 
-int main() {
-	cout << "Examples of vectors: \n";
-	vector <int> v = { 2,4,6,8,10 };//even numbers vector initialized
-	vector <string> friends = { "Parfait", "Par", "Pape" };//string vector initialized
-	vector <int> ve(4);// initialized an empty integer vector of size 4
-	vector <string> vs(3);// initialized an empty string vector of size 3
-	cout << "\nLet's check out some values of the vectors: \n"
-		<< "\nthe third value of vector v is "
-		<< v[2] << "\n"
-		<< "\nthe first value of vector friend is "
-		<< friends[0];
-	keep_windy();
+//int main() {
+//	cout << "Examples of vectors: \n";
+//	vector <int> v = { 2,4,6,8,10 };//even numbers vector initialized
+//	vector <string> friends = { "Parfait", "Par", "Pape" };//string vector initialized
+//	vector <int> ve(4);// initialized an empty integer vector of size 4
+//	vector <string> vs(3);// initialized an empty string vector of size 3
+//	cout << "\nLet's check out some values of the vectors: \n"
+//		<< "\nthe third value of vector v is "
+//		<< v[2] << "\n"
+//		<< "\nthe first value of vector friend is "
+//		<< friends[0];
+//	keep_windy();
+//
+//}
 
+
+// // traversing a vector
+
+int main() {
+	vector <int> vi = { 1,2,4,3,21,53 }; // initialized a vector vi
+	cout << "Our vector is of size " << vi.size() << ".\n";
+
+	for (int i = 0; i < vi.size(); ++i) {
+		cout << vi[i] << "\n";
+	}
+	keep_windy();
 }
