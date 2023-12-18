@@ -985,18 +985,37 @@ int sqq(int x) {
 
 // creating a simple dictionary
 
-int main() {
-	vector <string> dictionary;
-	for (string temp; cin >> temp;) {
-		dictionary.push_back(temp);
-	}
-	cout << "\nNumber of words: " << dictionary.size() << "\n";
-	sort(dictionary.begin(), dictionary.end());
+//int main() {
+//	vector <string> dictionary;
+//	for (string temp; cin >> temp;) {
+//		dictionary.push_back(temp);
+//	}
+//	cout << "\nNumber of words: " << dictionary.size() << "\n";
+//	sort(dictionary.begin(), dictionary.end());
+//
+//	for (int i = 0; i < dictionary.size(); ++i) {
+//		if (i == 0 || dictionary[i-1] != dictionary[i]) {
+//			cout << dictionary[i] << "\n";
+//		}
+//	}
+//	keep_windy();
+//}
 
-	for (int i = 0; i < dictionary.size(); ++i) {
-		if (i == 0 || dictionary[i-1] != dictionary[i]) {
-			cout << dictionary[i] << "\n";
+// bleeping exercise
+
+int main() {
+	vector <string> lyrics;
+	cout << "\nType in your favorite lyrics uncensored: \n";
+	for (string temp; cin >> temp;) {
+		lyrics.push_back(temp);
+	}
+	for (int i = 0; i < lyrics.size(); ++i) {
+		if (lyrics[i] == "niggas" || lyrics[i] == "motherfuckers" || lyrics[i] == "shit") {
+			lyrics[i] = "BLEEP";
 		}
+	}
+	for (string x : lyrics) {
+		cout << x << "\s";
 	}
 	keep_windy();
 }
