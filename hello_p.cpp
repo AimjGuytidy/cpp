@@ -950,13 +950,33 @@ int sqq(int x) {
 
 // numeric example
 
+//int main() {
+//	vector <double> temps;
+//	cout << "Enter temperatures in dc: \n";
+//	for (double temp; cin >> temp;) {
+//		temps.push_back(temp);
+//	}
+//	for (double x : temps) {
+//		cout << x << "\n";
+//	}
+//}
+
 int main() {
 	vector <double> temps;
-	cout << "Enter temperatures in dc: \n";
-	for (double temp; cin >> temp;) {
+	double temp = 0;
+	while (cin >> temp) {
 		temps.push_back(temp);
 	}
 	for (double x : temps) {
 		cout << x << "\n";
 	}
+	double sums = 0;
+	for (double x : temps) {
+		sums += x;
+	}
+	cout << "\nThe sum is: " << sums
+		<< "\nThe mean is: " << sums / double(temps.size());
+	sort(temps.begin(), temps.end());
+	cout << "\nThe median is: " << temps[temps.size() / 2] << "\n";
+
 }
