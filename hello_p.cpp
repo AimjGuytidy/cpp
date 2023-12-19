@@ -1003,19 +1003,56 @@ int sqq(int x) {
 
 // bleeping exercise
 
+//int main() {
+//	vector <string> lyrics;
+//	cout << "\nType in your favorite lyrics uncensored: \n";
+//	for (string temp; cin >> temp;) {
+//		lyrics.push_back(temp);
+//	}
+//	for (int i = 0; i < lyrics.size(); ++i) {
+//		if (lyrics[i] == "niggas" || lyrics[i] == "motherfuckers" || lyrics[i] == "shit") {
+//			lyrics[i] = "BLEEP";
+//		}
+//	}
+//	for (string x : lyrics) {
+//		cout << x << "\s";
+//	}
+//	keep_windy();
+//}
+
+// Language features
+
+// Drills!!!
+
+
+
+// chapter 5. Errors
+
+// // Intro
+
+// compile-time errors: errors found by the compiler. syntax errors and type errors
+// Link-time errors: errors found by the linker when trying to combine object files into an executable program
+// Run-time errors: errors found by checks in a running program. errors detected by computers, libraries or user code 
+// Logic errors: errors found by the programmer looking for the causes of erroneous results.
+
+// // Sources of errors
+
+int fibonacci(int k) {
+
+	if (k == 0) {
+		return 0;
+	}
+	else if (k == 1) {
+		return 1;
+	}
+	else {
+		return fibonacci(k-1) + fibonacci(k - 2);
+	}
+}
+
 int main() {
-	vector <string> lyrics;
-	cout << "\nType in your favorite lyrics uncensored: \n";
-	for (string temp; cin >> temp;) {
-		lyrics.push_back(temp);
-	}
-	for (int i = 0; i < lyrics.size(); ++i) {
-		if (lyrics[i] == "niggas" || lyrics[i] == "motherfuckers" || lyrics[i] == "shit") {
-			lyrics[i] = "BLEEP";
-		}
-	}
-	for (string x : lyrics) {
-		cout << x << "\s";
-	}
-	keep_windy();
+	int number = 0;
+	cout << "enter how many fibo u want: \n";
+	cin >> number;
+	cout << "\n" << fibonacci(number);
 }
