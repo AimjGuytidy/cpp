@@ -193,7 +193,7 @@ inline void keep_windy() { char ch; cin >> ch; }
 	int a = 2000;
 	char b = a;
 	int c = b;
-	if (a != b)
+	if (a != c)
 		cout << "Ouups!: " << a << " != " << c;
 	else
 		cout << "we have a great reader!";
@@ -830,6 +830,28 @@ void nono() {
 //	}
 //}
 
+// Attempting to write square root function using Newton-Raphson method
+
+double sqrt_newton(double x) {
+	if (x == 0.0) {
+		cerr << "You have entered 0!\n";
+		return 0.0;
+	}
+	double guess = x / 2.0;
+	for (int i = 0; i < 1000000; ++i) {
+		guess = 0.5 * (guess + (x / guess));
+	}
+	return guess;
+}
+
+int main() {
+	for (int i = 0; i < 3600; ++i) {
+		cout << fixed
+			<< i << "\t" << sqrt_newton(i) << "\n";
+	}
+}
+
+
 // simplified square loop
 
 // create a void function to print squares
@@ -1035,24 +1057,39 @@ int sqq(int x) {
 // Run-time errors: errors found by checks in a running program. errors detected by computers, libraries or user code 
 // Logic errors: errors found by the programmer looking for the causes of erroneous results.
 
+
+
+//int fibonacci(int k) {
+//
+//	if (k == 0) {
+//		return 0;
+//	}
+//	else if (k == 1) {
+//		return 1;
+//	}
+//	else {
+//		return fibonacci(k-1) + fibonacci(k - 2);
+//	}
+//}
+//
+//int main() {
+//	int number = 0;
+//	cout << "enter how many fibo u want: \n";
+//	cin >> number;
+//	cout << "\n" << fibonacci(number);
+//} fibonacci
+
+
 // // Sources of errors
 
-int fibonacci(int k) {
+//int main() {
+//
+//	cout << sqrt(-1.2);
+//}
 
-	if (k == 0) {
-		return 0;
-	}
-	else if (k == 1) {
-		return 1;
-	}
-	else {
-		return fibonacci(k-1) + fibonacci(k - 2);
-	}
-}
-
-int main() {
-	int number = 0;
-	cout << "enter how many fibo u want: \n";
-	cin >> number;
-	cout << "\n" << fibonacci(number);
-}
+// poor specification
+// incomplete programs
+// unexpected arguments
+// unexpected input
+// unexpected state (data)
+// logical errors
