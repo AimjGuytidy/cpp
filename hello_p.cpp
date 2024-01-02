@@ -1006,7 +1006,7 @@ int sqq(int x) {
 // sorting int vector manually
 
 // create a void function
-void bubblesort(vector <int>& vec) {
+void bubblesort(vector <double>& vec) {
 	// define vector size variable
 	int n = vec.size();
 	for (int i = 0; i < n-1 ; ++i) {
@@ -1022,13 +1022,13 @@ void bubblesort(vector <int>& vec) {
 }
 
 // let's test the function
-int main() {
-	vector <int> tester = { 0,9,2,4,1,6,3,2,7,2,8 };
-	bubblesort(tester);
-	for (int x : tester) {
-		cout << x << "\n";
-	}
-}
+//int main() {
+//	vector <int> tester = { 0,9,2,4,1,6,3,2,7,2,8 };
+//	bubblesort(tester);
+//	for (int x : tester) {
+//		cout << x << "\n";
+//	}
+//}
 
 // A text example
 
@@ -1072,6 +1072,143 @@ int main() {
 // Language features
 
 // Drills!!!
+
+//int main() {
+//	int var1 = 0;
+//	int var2 = 0;
+//	char term;
+//	cout << "Please enter 2 integers: \n";
+//	while (cin >> var1 >> var2) {
+//		cout << var1 << "\n" << var2;
+//		
+//	}
+//	cin >> term;
+//	if (term == '|') {
+//		return 0;
+//	}
+//}
+
+//int main() {
+//	double var1 = 0.0;
+//	double var2 = 0.0;
+//	char term;
+//	cout << "Please enter 2 numbers: \n";
+//	while (cin >> var1 >> var2) {
+//		if (var1 != var2)
+//		{
+//			cout << "The smaller value is: \n"
+//				<< fixed
+//				<< min(var1, var2)
+//				<< "\nThe larger value is:\n"
+//				<< max(var1, var2)
+//				<< "\n";
+//			if (abs(var1 - var2) < 1.0 / 100) {
+//				cout << "The numbers are almost equal.\n";
+//			}
+//		}
+//		else
+//			cout << "\nThe numbers are equal\n";
+//
+//	}
+//	cin >> term;
+//	if (term == '|') {
+//		return 0;
+//	}
+//}
+
+//int main() {
+//	double var1 = 0.0;
+//	vector <double> temp;
+//	char term;
+//	cout << "Please enter 2 numbers: \n";
+//	while (cin >> var1) {
+//		temp.push_back(var1);
+//		bubblesort(temp);
+//		if (temp[0] != temp[temp.size() - 1])
+//		{
+//			cout << "The smaller value so far: \n"
+//				<< fixed
+//				<< temp[0]
+//				<< "\nThe larger value so far:\n"
+//				<< temp[temp.size()-1]
+//				<< "\n";
+//			if (abs(temp[0] - temp[temp.size() - 1]) < 1.0 / 100) {
+//				cout << "The numbers are almost equal.\n";
+//			}
+//		}
+//		
+//		else
+//			cout << "\nThe numbers are equal\n";
+//		
+//
+//	}
+//	cin >> term;
+//	if (term == '|') {
+//		return 0;
+//	}
+//}
+
+int main() {
+	double var1 = 0.0;
+	double var2 = 0.0;
+	string unit = "cm";
+	vector <double> temp;
+	string terms;
+	char term;
+	cout << "Please enter 2 numbers: \n";
+	while (cin >> var1 >> unit) {
+		if (unit == "m" || unit == " m")
+		{
+			var2 = var1 * 100;
+			temp.push_back(var2);
+			cout << "the converted value is: \n"
+				<< var2 << " cm\n";
+		}
+		else if (unit == "cm" || unit == " cm")
+		{
+			var2 = var1;
+			temp.push_back(var2);
+			cout << "the converted value is: \n"
+				<< var2 << " cm\n";
+		}
+		else if (unit == "in" || unit == " in")
+		{
+			var2 = var1 * 2.54;
+			temp.push_back(var2);
+			cout << "the converted value is: \n"
+				<< var2 << " cm\n";
+		}
+		else if (unit == "ft" || unit == " ft")
+		{
+			var2 = var1 * 2.54 * 12;
+			temp.push_back(var2);
+			cout << "the converted value is: \n"
+				<< var2 << " cm\n";
+		}
+			
+		else
+		{
+			cerr << "The used unit is not recognized by the program!\n";
+		}
+		
+
+	}
+	bubblesort(temp);
+	double sum = 0.0;
+	for (double x : temp) {
+		sum += x;
+	}
+	
+	cout << "The smallest value is:\n"
+		<< temp[0] << " cm\n\n"
+		<< "The largest value is: \n"
+		<< temp[temp.size() - 1] << " cm\n\n"
+		<< "The sum of all the entered values is: \n"
+		<< sum << " cm\n\n\n";
+	for (double x : temp)
+		cout << x << "\n";
+	
+}
 
 
 
