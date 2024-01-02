@@ -844,12 +844,12 @@ double sqrt_newton(double x) {
 	return guess;
 }
 
-int main() {
-	for (int i = 0; i < 3600; ++i) {
-		cout << fixed
-			<< i << "\t" << sqrt_newton(i) << "\n";
-	}
-}
+//int main() {
+//	for (int i = 0; i < 3600; ++i) {
+//		cout << fixed
+//			<< i << "\t" << sqrt_newton(i) << "\n";
+//	}
+//}
 
 
 // simplified square loop
@@ -1002,6 +1002,33 @@ int sqq(int x) {
 //	cout << "\nThe median is: " << temps[temps.size() / 2] << "\n";
 //
 //}
+
+// sorting int vector manually
+
+// create a void function
+void bubblesort(vector <int>& vec) {
+	// define vector size variable
+	int n = vec.size();
+	for (int i = 0; i < n-1 ; ++i) {
+		for (int j = 0; j < n - i - 1; ++j) {
+			if (vec[j] >= vec[j + 1]) {
+				int temp = vec[j];
+				vec[j] = vec[j + 1];
+				vec[j + 1] = temp;
+
+			}
+		}
+	}
+}
+
+// let's test the function
+int main() {
+	vector <int> tester = { 0,9,2,4,1,6,3,2,7,2,8 };
+	bubblesort(tester);
+	for (int x : tester) {
+		cout << x << "\n";
+	}
+}
 
 // A text example
 
