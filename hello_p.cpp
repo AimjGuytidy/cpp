@@ -1295,40 +1295,58 @@ void bubblesort(vector <double>& vec) {
 
 // simple calculator
 
+//int main() {
+//	double operand1 = 0.0;
+//	double operand2 = 0.0;
+//	string opp = "+";
+//	double result = 0.0;
+//	cout << "Please enter 2 numbers and the operator used for the operation.\n the operator should be between '+'; '-'; '/'; and '*'.\n\n";
+//	cin >> operand1 >> operand2 >> opp;
+//	if (opp == "'+'")
+//	{
+//		result = operand1 + operand2;
+//		cout << "The sum of " << operand1 << " and " << operand2 << " is " << result << ".\n";
+//	}
+//	else if (opp == "'-'")
+//	{
+//		result = operand1 - operand2;
+//		cout << "The difference between " << operand1 << " and " << operand2 << " is " << result << ".\n";
+//	}
+//	else if (opp == "'/'")
+//	{
+//		result = operand1 / operand2;
+//		cout << "The ratio of " << operand1 << " over " << operand2 << " is " << result << ".\n";
+//	}
+//	else if (opp == "'*'")
+//	{
+//		result = operand1 * operand2;
+//		cout << "The multiplication of " << operand1 << " and " << operand2 << " is " << result << ".\n";
+//	}
+//	else
+//		cout << "\nYou did not follow the instructions!\n";
+//		
+//	
+//	keep_windy();
+//}
+
+// string to numerics
+
 int main() {
-	double operand1 = 0.0;
-	double operand2 = 0.0;
-	string opp = "+";
-	double result = 0.0;
-	cout << "Please enter 2 numbers and the operator used for the operation.\n the operator should be between '+'; '-'; '/'; and '*'.\n\n";
-	cin >> operand1 >> operand2 >> opp;
-	if (opp == "'+'")
+	vector <string> string_vec = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+	int input = 0;
+	string exiter;
+	while (true)
 	{
-		result = operand1 + operand2;
-		cout << "The sum of " << operand1 << " and " << operand2 << " is " << result << ".\n";
+		cout << "\nPlease enter any single digit:\n";
+		cin >> input>>exiter;
+		cout << "\nthe spelled-out digit is " << string_vec[input] << ".\n";
+		if (exiter == "q") {
+			return 0;
+		}
 	}
-	else if (opp == "'-'")
-	{
-		result = operand1 - operand2;
-		cout << "The difference between " << operand1 << " and " << operand2 << " is " << result << ".\n";
-	}
-	else if (opp == "'/'")
-	{
-		result = operand1 / operand2;
-		cout << "The ratio of " << operand1 << " over " << operand2 << " is " << result << ".\n";
-	}
-	else if (opp == "'*'")
-	{
-		result = operand1 * operand2;
-		cout << "The multiplication of " << operand1 << " and " << operand2 << " is " << result << ".\n";
-	}
-	else
-		cout << "\nYou did not follow the instructions!\n";
-		
 	
 	keep_windy();
 }
-
 
 // chapter 5. Errors
 
