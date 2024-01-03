@@ -1148,68 +1148,92 @@ void bubblesort(vector <double>& vec) {
 //	}
 //}
 
+//int main() {
+//	double var1 = 0.0;
+//	double var2 = 0.0;
+//	string unit = "cm";
+//	vector <double> temp;
+//	string terms;
+//	char term;
+//	cout << "Please enter 2 numbers: \n";
+//	while (cin >> var1 >> unit) {
+//		if (unit == "m" || unit == " m")
+//		{
+//			var2 = var1 * 100;
+//			temp.push_back(var2);
+//			cout << "the converted value is: \n"
+//				<< var2 << " cm\n";
+//		}
+//		else if (unit == "cm" || unit == " cm")
+//		{
+//			var2 = var1;
+//			temp.push_back(var2);
+//			cout << "the converted value is: \n"
+//				<< var2 << " cm\n";
+//		}
+//		else if (unit == "in" || unit == " in")
+//		{
+//			var2 = var1 * 2.54;
+//			temp.push_back(var2);
+//			cout << "the converted value is: \n"
+//				<< var2 << " cm\n";
+//		}
+//		else if (unit == "ft" || unit == " ft")
+//		{
+//			var2 = var1 * 2.54 * 12;
+//			temp.push_back(var2);
+//			cout << "the converted value is: \n"
+//				<< var2 << " cm\n";
+//		}
+//			
+//		else
+//		{
+//			cerr << "The used unit is not recognized by the program!\n";
+//		}
+//		
+//
+//	}
+//	bubblesort(temp);
+//	double sum = 0.0;
+//	for (double x : temp) {
+//		sum += x;
+//	}
+//	
+//	cout << "The smallest value is:\n"
+//		<< temp[0] << " cm\n\n"
+//		<< "The largest value is: \n"
+//		<< temp[temp.size() - 1] << " cm\n\n"
+//		<< "The sum of all the entered values is: \n"
+//		<< sum << " cm\n\n\n";
+//	for (double x : temp)
+//		cout << x << "\n";
+//	
+//}
+
+// calculating median
 int main() {
-	double var1 = 0.0;
-	double var2 = 0.0;
-	string unit = "cm";
-	vector <double> temp;
-	string terms;
-	char term;
-	cout << "Please enter 2 numbers: \n";
-	while (cin >> var1 >> unit) {
-		if (unit == "m" || unit == " m")
-		{
-			var2 = var1 * 100;
-			temp.push_back(var2);
-			cout << "the converted value is: \n"
-				<< var2 << " cm\n";
-		}
-		else if (unit == "cm" || unit == " cm")
-		{
-			var2 = var1;
-			temp.push_back(var2);
-			cout << "the converted value is: \n"
-				<< var2 << " cm\n";
-		}
-		else if (unit == "in" || unit == " in")
-		{
-			var2 = var1 * 2.54;
-			temp.push_back(var2);
-			cout << "the converted value is: \n"
-				<< var2 << " cm\n";
-		}
-		else if (unit == "ft" || unit == " ft")
-		{
-			var2 = var1 * 2.54 * 12;
-			temp.push_back(var2);
-			cout << "the converted value is: \n"
-				<< var2 << " cm\n";
-		}
-			
-		else
-		{
-			cerr << "The used unit is not recognized by the program!\n";
-		}
-		
-
+	vector <double> vec;
+	double median = 0.0;
+	for (double temp; cin >> temp;) {
+		vec.push_back(temp);
 	}
-	bubblesort(temp);
-	double sum = 0.0;
-	for (double x : temp) {
-		sum += x;
+	bubblesort(vec);
+	std::cout << "\nthe size of the vector is: " 
+		<< vec.size() << "\n";
+	for (double x : vec) {
+		std::cout << x << "\n";
 	}
-	
-	cout << "The smallest value is:\n"
-		<< temp[0] << " cm\n\n"
-		<< "The largest value is: \n"
-		<< temp[temp.size() - 1] << " cm\n\n"
-		<< "The sum of all the entered values is: \n"
-		<< sum << " cm\n\n\n";
-	for (double x : temp)
-		cout << x << "\n";
-	
+	int n = vec.size();
+	if (n % 2 == 0) {
+		median = (vec[n / 2] + vec[(n / 2) - 1]) / 2;
+	}
+	else
+	{
+		median = vec[ ( n - 1 ) / 2];
+	}
+	std::cout << "\nthe median of the vector is: "
+		<< median << "\n";
 }
-
 
 
 // chapter 5. Errors
