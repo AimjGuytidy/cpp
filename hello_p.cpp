@@ -1211,29 +1211,54 @@ void bubblesort(vector <double>& vec) {
 //}
 
 // calculating median
+//int main() {
+//	vector <double> vec;
+//	double median = 0.0;
+//	for (double temp; cin >> temp;) {
+//		vec.push_back(temp);
+//	}
+//	bubblesort(vec);
+//	std::cout << "\nthe size of the vector is: " 
+//		<< vec.size() << "\n";
+//	for (double x : vec) {
+//		std::cout << x << "\n";
+//	}
+//	int n = vec.size();
+//	if (n % 2 == 0) {
+//		median = (vec[n / 2] + vec[(n / 2) - 1]) / 2;
+//	}
+//	else
+//	{
+//		median = vec[ ( n - 1 ) / 2];
+//	}
+//	std::cout << "\nthe median of the vector is: "
+//		<< median << "\n";
+//}
+
 int main() {
 	vector <double> vec;
 	double median = 0.0;
+	double sum = 0.0;
+	cout << "enter a sequence of distances between neighbouring cities: \n";
 	for (double temp; cin >> temp;) {
 		vec.push_back(temp);
 	}
-	bubblesort(vec);
-	std::cout << "\nthe size of the vector is: " 
+	std::cout << "\nthe size of the vector is: "
 		<< vec.size() << "\n";
 	for (double x : vec) {
-		std::cout << x << "\n";
+		sum += x;
+		
 	}
-	int n = vec.size();
-	if (n % 2 == 0) {
-		median = (vec[n / 2] + vec[(n / 2) - 1]) / 2;
-	}
-	else
-	{
-		median = vec[ ( n - 1 ) / 2];
-	}
-	std::cout << "\nthe median of the vector is: "
-		<< median << "\n";
+	std::cout << "the sum is " << sum << "\n";
+	bubblesort(vec);
+	cout << "\nThe smallest distance is: " << vec[0] << "\n"
+		<< "\nThe largest distance is: " << vec[vec.size()-1] << "\n"
+		<< "\nThe mean distance is: " << sum / vec.size()<<"\n";
+	
+	
+	
 }
+
 
 
 // chapter 5. Errors
