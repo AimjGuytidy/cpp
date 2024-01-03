@@ -1259,39 +1259,76 @@ void bubblesort(vector <double>& vec) {
 
 // Numbers guessing game
 
+//int main() {
+//	int lowerbound = 1;
+//	int upperbound = 100;
+//	int guess = 0;
+//	string answer;
+//	for (int attempts = 7; attempts > 0; attempts--) {
+//		guess = (lowerbound + upperbound) / 2;
+//		cout << "\nIs the following number " << guess << " your guess? (Y/N)\n";
+//		cin >> answer;
+//		if (answer == "Y") {
+//			cout << "\nThe correct guess is " << guess << "\n";
+//			break;
+//		}
+//		else if (answer == "N") {
+//			cout << "\nIs your guess greater than " << guess << " ?\n";
+//			cin >> answer;
+//			if (answer == "Y") {
+//				lowerbound = guess + 1;
+//			}
+//			else if (answer == "N") {
+//				upperbound = guess - 1;
+//			}
+//			else {
+//				cout << "\nPlease respond with (Y/N)!\n";
+//				continue;
+//			}
+//		}
+//		else {
+//			cout << "\nPlease respond with (Y/N)!\n";
+//			continue;
+//		}
+//	}
+//}
+
+// simple calculator
+
 int main() {
-	int lowerbound = 1;
-	int upperbound = 100;
-	int guess = 0;
-	string answer;
-	for (int attempts = 7; attempts > 0; attempts--) {
-		guess = (lowerbound + upperbound) / 2;
-		cout << "\nIs the following number " << guess << " your guess? (Y/N)\n";
-		cin >> answer;
-		if (answer == "Y") {
-			cout << "\nThe correct guess is " << guess << "\n";
-			break;
-		}
-		else if (answer == "N") {
-			cout << "\nIs your guess greater than " << guess << " ?\n";
-			cin >> answer;
-			if (answer == "Y") {
-				lowerbound = guess + 1;
-			}
-			else if (answer == "N") {
-				upperbound = guess - 1;
-			}
-			else {
-				cout << "\nPlease respond with (Y/N)!\n";
-				continue;
-			}
-		}
-		else {
-			cout << "\nPlease respond with (Y/N)!\n";
-			continue;
-		}
+	double operand1 = 0.0;
+	double operand2 = 0.0;
+	string opp = "+";
+	double result = 0.0;
+	cout << "Please enter 2 numbers and the operator used for the operation.\n the operator should be between '+'; '-'; '/'; and '*'.\n\n";
+	cin >> operand1 >> operand2 >> opp;
+	if (opp == "'+'")
+	{
+		result = operand1 + operand2;
+		cout << "The sum of " << operand1 << " and " << operand2 << " is " << result << ".\n";
 	}
+	else if (opp == "'-'")
+	{
+		result = operand1 - operand2;
+		cout << "The difference between " << operand1 << " and " << operand2 << " is " << result << ".\n";
+	}
+	else if (opp == "'/'")
+	{
+		result = operand1 / operand2;
+		cout << "The ratio of " << operand1 << " over " << operand2 << " is " << result << ".\n";
+	}
+	else if (opp == "'*'")
+	{
+		result = operand1 * operand2;
+		cout << "The multiplication of " << operand1 << " and " << operand2 << " is " << result << ".\n";
+	}
+	else
+		cout << "\nYou did not follow the instructions!\n";
+		
+	
+	keep_windy();
 }
+
 
 // chapter 5. Errors
 
