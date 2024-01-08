@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <cmath>
 #include <algorithm>
 #include <vector>
@@ -1331,22 +1332,104 @@ void bubblesort(vector <double>& vec) {
 
 // string to numerics
 
+//int main() {
+//	vector <string> string_vec = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+//	int input = 0;
+//	string exiter;
+//	while (true)
+//	{
+//		cout << "\nPlease enter any single digit:\n";
+//		cin >> input>>exiter;
+//		cout << "\nthe spelled-out digit is " << string_vec[input] << ".\n";
+//		if (exiter == "q") {
+//			return 0;
+//		}
+//	}
+//	
+//	keep_windy();
+//}
+//int main() {
+//	int operand1 = 0;
+//	string input1;
+//	vector <string> string_vec = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+//	cin >> input1;
+//	for (string x : string_vec) {
+//		if (input1 == x) {
+//			auto k = find(string_vec.begin(), string_vec.end(), x);
+//			operand1 = k - string_vec.begin();
+//		}
+//	}
+//	cout << "\nthe numeric expression is: " << operand1;
+//}
+
+// mini calculator modified
+
 int main() {
+	int operand1 = 0;
+	int operand2 = 0;
 	vector <string> string_vec = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-	int input = 0;
-	string exiter;
-	while (true)
-	{
-		cout << "\nPlease enter any single digit:\n";
-		cin >> input>>exiter;
-		cout << "\nthe spelled-out digit is " << string_vec[input] << ".\n";
-		if (exiter == "q") {
-			return 0;
-		}
+	string input1 = "";
+	string input2 = "";
+	string opp = "+";
+	double result = 0.0;
+	cout << "Please enter 2 numbers and the operator used for the operation.\n the operator should be between '+'; '-'; '/'; and '*'.\n\n";
+	cin >> input1 >> input2 >> opp;
+	
+	if (find(string_vec.begin(), string_vec.end(), input1) != string_vec.end()) {
+		auto k = find(string_vec.begin(), string_vec.end(), input1);
+		operand1 = k - string_vec.begin();
+		std::cout << "\n" << operand1 << "\n";
 	}
+	else
+	{
+		stringstream temp;
+		temp << input1;
+		temp >> operand1;
+	}
+
+	if (find(string_vec.begin(), string_vec.end(), input2) != string_vec.end()) {
+		auto t = find(string_vec.begin(), string_vec.end(), input2);
+		operand2 = t - string_vec.begin();
+		std::cout << "\n" << operand2 << "\n";
+	}
+	else
+	{
+		stringstream temp;
+		temp << input2;
+		temp >> operand2;
+	}
+	
+	cout << "\noperands: " << operand1 << "\t" << operand2 << "\n";
+	
+	if (opp == "'+'")
+	{
+		result = operand1 + operand2;
+		cout << "The sum of " << operand1 << " and " << operand2 << " is " << result << ".\n";
+	}
+	else if (opp == "'-'")
+	{
+		result = operand1 - operand2;
+		cout << "The difference between " << operand1 << " and " << operand2 << " is " << result << ".\n";
+	}
+	else if (opp == "'/'")
+	{
+		double opdenom = operand2;
+		result = operand1 / opdenom;
+		cout << fixed;
+		cout << "The ratio of " << operand1 << " over " << operand2 << " is " << result << ".\n";
+	}
+	else if (opp == "'*'")
+	{
+		result = operand1 * operand2;
+		cout << "The multiplication of " << operand1 << " and " << operand2 << " is " << result << ".\n";
+	}
+	else
+		cout << "\nYou did not follow the instructions!\n";
+		
 	
 	keep_windy();
 }
+
 
 // chapter 5. Errors
 
