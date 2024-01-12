@@ -1364,70 +1364,99 @@ void bubblesort(vector <double>& vec) {
 
 // mini calculator modified
 
-int main() {
-	int operand1 = 0;
-	int operand2 = 0;
-	vector <string> string_vec = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-	string input1 = "";
-	string input2 = "";
-	string opp = "+";
-	double result = 0.0;
-	cout << "Please enter 2 numbers and the operator used for the operation.\n the operator should be between '+'; '-'; '/'; and '*'.\n\n";
-	cin >> input1 >> input2 >> opp;
-	
-	if (find(string_vec.begin(), string_vec.end(), input1) != string_vec.end()) {
-		auto k = find(string_vec.begin(), string_vec.end(), input1);
-		operand1 = k - string_vec.begin();
-		std::cout << "\n" << operand1 << "\n";
-	}
-	else
-	{
-		stringstream temp;
-		temp << input1;
-		temp >> operand1;
-	}
+//int main() {
+//	int operand1 = 0;
+//	int operand2 = 0;
+//	vector <string> string_vec = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+//	string input1 = "";
+//	string input2 = "";
+//	string opp = "+";
+//	double result = 0.0;
+//	cout << "Please enter 2 numbers and the operator used for the operation.\n the operator should be between '+'; '-'; '/'; and '*'.\n\n";
+//	cin >> input1 >> input2 >> opp;
+//	
+//	if (find(string_vec.begin(), string_vec.end(), input1) != string_vec.end()) {
+//		auto k = find(string_vec.begin(), string_vec.end(), input1);
+//		operand1 = k - string_vec.begin();
+//		std::cout << "\n" << operand1 << "\n";
+//	}
+//	else
+//	{
+//		stringstream temp;
+//		temp << input1;
+//		temp >> operand1;
+//	}
+//
+//	if (find(string_vec.begin(), string_vec.end(), input2) != string_vec.end()) {
+//		auto t = find(string_vec.begin(), string_vec.end(), input2);
+//		operand2 = t - string_vec.begin();
+//		std::cout << "\n" << operand2 << "\n";
+//	}
+//	else
+//	{
+//		stringstream temp;
+//		temp << input2;
+//		temp >> operand2;
+//	}
+//	
+//	cout << "\noperands: " << operand1 << "\t" << operand2 << "\n";
+//	
+//	if (opp == "'+'")
+//	{
+//		result = operand1 + operand2;
+//		cout << "The sum of " << operand1 << " and " << operand2 << " is " << result << ".\n";
+//	}
+//	else if (opp == "'-'")
+//	{
+//		result = operand1 - operand2;
+//		cout << "The difference between " << operand1 << " and " << operand2 << " is " << result << ".\n";
+//	}
+//	else if (opp == "'/'")
+//	{
+//		double opdenom = operand2;
+//		result = operand1 / opdenom;
+//		cout << fixed;
+//		cout << "The ratio of " << operand1 << " over " << operand2 << " is " << result << ".\n";
+//	}
+//	else if (opp == "'*'")
+//	{
+//		result = operand1 * operand2;
+//		cout << "The multiplication of " << operand1 << " and " << operand2 << " is " << result << ".\n";
+//	}
+//	else
+//		cout << "\nYou did not follow the instructions!\n";
+//		
+//	
+//	keep_windy();
+//}
 
-	if (find(string_vec.begin(), string_vec.end(), input2) != string_vec.end()) {
-		auto t = find(string_vec.begin(), string_vec.end(), input2);
-		operand2 = t - string_vec.begin();
-		std::cout << "\n" << operand2 << "\n";
+// analysing 2^x power function
+int main() {
+	int square = 0;
+	double grains = 0.0;
+	double k = 0.0;
+	cout << "Here is the count of squares based on how many grains we want.\n";
+	for (int i = 0; i < 64; ++i) {
+		k = i;
+		grains = pow(2.0,k);
+		cout << grains << "\n";
+		if (grains >= 1000 && grains <=1999) {
+			cout << fixed;
+			cout << "\non square " << i + 1 << " we have at least 1000 grains.\n\n\n";
+			
+		}
+		else if (grains >= 1000000 && grains <= 1900000) {
+			cout << fixed;
+			cout << "\non square " << i + 1 << " we have at least 1000000 grains.\n\n\n";
+			
+		}
+		else if (grains >= 1000000000 && grains <= 1900000000) {
+			cout << fixed;
+			cout << "\non square " << i + 1 << " we have at least 1000000000 grains.\n\n\n";
+			
+		}
+
 	}
-	else
-	{
-		stringstream temp;
-		temp << input2;
-		temp >> operand2;
-	}
-	
-	cout << "\noperands: " << operand1 << "\t" << operand2 << "\n";
-	
-	if (opp == "'+'")
-	{
-		result = operand1 + operand2;
-		cout << "The sum of " << operand1 << " and " << operand2 << " is " << result << ".\n";
-	}
-	else if (opp == "'-'")
-	{
-		result = operand1 - operand2;
-		cout << "The difference between " << operand1 << " and " << operand2 << " is " << result << ".\n";
-	}
-	else if (opp == "'/'")
-	{
-		double opdenom = operand2;
-		result = operand1 / opdenom;
-		cout << fixed;
-		cout << "The ratio of " << operand1 << " over " << operand2 << " is " << result << ".\n";
-	}
-	else if (opp == "'*'")
-	{
-		result = operand1 * operand2;
-		cout << "The multiplication of " << operand1 << " and " << operand2 << " is " << result << ".\n";
-	}
-	else
-		cout << "\nYou did not follow the instructions!\n";
-		
-	
-	keep_windy();
 }
 
 
