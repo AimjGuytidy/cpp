@@ -1592,19 +1592,38 @@ int is_prime(int a) {
 
 // find primes based on a given threshold
 
+//int main() {
+//	int i = 0;
+//	int maxa = 0;
+//	vector <int> primizo;
+//	cout << "Please enter a maximum number so we can find primes between 1 and the number?\n";
+//	cin >> maxa;
+//	while (i < maxa + 1) {
+//		if (is_prime(i)) {
+//			primizo.push_back(i);
+//			cout << i << " is prime\n";
+//		}
+//		else
+//			cout << i << "\n";
+//		++i;
+//	}
+//	for (int x : primizo) {
+//		cout << x << "\t";
+//	}
+//}
+
+
 int main() {
 	int i = 0;
-	int maxa = 0;
+	int n = 0;
 	vector <int> primizo;
-	cout << "Please enter a maximum number so we can find primes between 1 and the number?\n";
-	cin >> maxa;
-	while (i < maxa + 1) {
+	cout << "Please enter a maximum number of primes you want?\n";
+	cin >> n;
+	while (primizo.size() < n ) {
 		if (is_prime(i)) {
 			primizo.push_back(i);
 			cout << i << " is prime\n";
 		}
-		else
-			cout << i << "\n";
 		++i;
 	}
 	for (int x : primizo) {
