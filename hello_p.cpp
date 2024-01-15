@@ -1510,54 +1510,80 @@ int powered(int a, int b) {
 //}
 
 // Rock Paper Scissors program
-int main() {
-	vector <string> rocky = { "Rock", "Paper", "Scissors" };
-	string choice = "Rock";
-	int prochoice = 0;
-	string answer = "y";
+//int main() {
+//	vector <string> rocky = { "Rock", "Paper", "Scissors" };
+//	string choice = "Rock";
+//	int prochoice = 0;
+//	string answer = "y";
+//	
+//	while (true) {
+//	cout << "Choose between rock, paper and scissors!\n";
+//	cin >> choice;
+//	srand((unsigned)time(NULL));
+//	prochoice = rand() % 3;
+//	if (choice == rocky[prochoice]) {
+//		cout << "\nI chose " << rocky[prochoice] << " over your "
+//			<< choice << "!!\n";
+//		cout << "\nIt's a draw!!!\n";
+//		
+//	}
+//	else if (choice == "Scissors" && rocky[prochoice] == "Rock") {
+//		cout << "\nI chose " << rocky[prochoice] << " over your "
+//			<< choice << "!!\n";
+//		cout << "\nI won!!!!\n";
+//	}
+//	else if (choice == "Rock" && rocky[prochoice] == "Paper") {
+//		cout << "\nI chose " << rocky[prochoice] << " over your "
+//			<< choice << "!!\n";
+//		cout << "\nI won!!!!\n";
+//	}
+//	else if (choice == "Paper" && rocky[prochoice] == "Scissors") {
+//		cout << "\nI chose " << rocky[prochoice] << " over your "
+//			<< choice << "!!\n";
+//		cout << "\nI won!!!\n";
+//	}
+//	else
+//	{
+//		cout << "\nI chose " << rocky[prochoice] << " over your "
+//			<< choice << "!!\n";
+//		cout << "\nYou won!!!\n";
+//	}
+//	cout << "\n\nDo you still want to play? (y/n)\n";
+//	cin >> answer;
+//	cout << "\n\n";
+//	if (answer != "y") {
+//		break;
+//	}
+//	}
+//}
+
+// program to look for prime numbers from 1-100
+int is_prime(int a) {
 	
-	while (true) {
-	cout << "Choose between rock, paper and scissors!\n";
-	cin >> choice;
-	srand((unsigned)time(NULL));
-	prochoice = rand() % 3;
-	if (choice == rocky[prochoice]) {
-		cout << "\nI chose " << rocky[prochoice] << " over your "
-			<< choice << "!!\n";
-		cout << "\nIt's a draw!!!\n";
+	if (a == 0 || a == 1) {
+		return false;
+	}
+	for (int i = 2; i < a + 1; ++i) {
 		
+		if (a % i == 0 && i != a) {
+			return false;
+			break;
+		}
 	}
-	else if (choice == "Scissors" && rocky[prochoice] == "Rock") {
-		cout << "\nI chose " << rocky[prochoice] << " over your "
-			<< choice << "!!\n";
-		cout << "\nI won!!!!\n";
-	}
-	else if (choice == "Rock" && rocky[prochoice] == "Paper") {
-		cout << "\nI chose " << rocky[prochoice] << " over your "
-			<< choice << "!!\n";
-		cout << "\nI won!!!!\n";
-	}
-	else if (choice == "Paper" && rocky[prochoice] == "Scissors") {
-		cout << "\nI chose " << rocky[prochoice] << " over your "
-			<< choice << "!!\n";
-		cout << "\nI won!!!\n";
-	}
-	else
-	{
-		cout << "\nI chose " << rocky[prochoice] << " over your "
-			<< choice << "!!\n";
-		cout << "\nYou won!!!\n";
-	}
-	cout << "\n\nDo you still want to play? (y/n)\n";
-	cin >> answer;
-	cout << "\n\n";
-	if (answer != "y") {
-		break;
-	}
-	}
+	
 }
 
-
+int main() {
+	int i = 0;
+	while (i < 101) {
+		if (is_prime(i)) {
+			cout << i << " is prime\n";
+		}
+		else
+			cout << i << "\n";
+		++i;
+	}
+}
 // chapter 5. Errors
 
 // // Intro
