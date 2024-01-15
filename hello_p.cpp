@@ -4,6 +4,7 @@
 #include <cmath>
 #include <algorithm>
 #include <vector>
+#include <cstdlib>
 using namespace std;
 inline void keep_windy() { char ch; cin >> ch; }
 //int main()
@@ -1480,31 +1481,79 @@ int powered(int a, int b) {
 
 
 // analysing 2^x power function using doubles
-int main() {
-	int square = 0;
-	double grains = 0.0;
-	double k = 0.0;
-	cout << "Here is the count of squares based on how many grains we want.\n";
-	for (int i = 0; i < 64; ++i) {
-		k = i;
-		grains = pow(2.0,k);
-		cout << grains << "\n";
-		if (grains >= 1000 && grains <=1999) {
-			cout << fixed;
-			cout << "\non square " << i + 1 << " we have at least 1000 grains.\n\n\n";
-			
-		}
-		else if (grains >= 1000000 && grains <= 1900000) {
-			cout << fixed;
-			cout << "\non square " << i + 1 << " we have at least 1000000 grains.\n\n\n";
-			
-		}
-		else if (grains >= 1000000000 && grains <= 1900000000) {
-			cout << fixed;
-			cout << "\non square " << i + 1 << " we have at least 1000000000 grains.\n\n\n";
-			
-		}
+//int main() {
+//	int square = 0;
+//	double grains = 0.0;
+//	double k = 0.0;
+//	cout << "Here is the count of squares based on how many grains we want.\n";
+//	for (int i = 0; i < 64; ++i) {
+//		k = i;
+//		grains = pow(2.0,k);
+//		cout << grains << "\n";
+//		if (grains >= 1000 && grains <=1999) {
+//			cout << fixed;
+//			cout << "\non square " << i + 1 << " we have at least 1000 grains.\n\n\n";
+//			
+//		}
+//		else if (grains >= 1000000 && grains <= 1900000) {
+//			cout << fixed;
+//			cout << "\non square " << i + 1 << " we have at least 1000000 grains.\n\n\n";
+//			
+//		}
+//		else if (grains >= 1000000000 && grains <= 1900000000) {
+//			cout << fixed;
+//			cout << "\non square " << i + 1 << " we have at least 1000000000 grains.\n\n\n";
+//			
+//		}
+//
+//	}
+//}
 
+// Rock Paper Scissors program
+int main() {
+	vector <string> rocky = { "Rock", "Paper", "Scissors" };
+	string choice = "Rock";
+	int prochoice = 0;
+	string answer = "y";
+	
+	while (true) {
+	cout << "Choose between rock, paper and scissors!\n";
+	cin >> choice;
+	srand((unsigned)time(NULL));
+	prochoice = rand() % 3;
+	if (choice == rocky[prochoice]) {
+		cout << "\nI chose " << rocky[prochoice] << " over your "
+			<< choice << "!!\n";
+		cout << "\nIt's a draw!!!\n";
+		
+	}
+	else if (choice == "Scissors" && rocky[prochoice] == "Rock") {
+		cout << "\nI chose " << rocky[prochoice] << " over your "
+			<< choice << "!!\n";
+		cout << "\nI won!!!!\n";
+	}
+	else if (choice == "Rock" && rocky[prochoice] == "Paper") {
+		cout << "\nI chose " << rocky[prochoice] << " over your "
+			<< choice << "!!\n";
+		cout << "\nI won!!!!\n";
+	}
+	else if (choice == "Paper" && rocky[prochoice] == "Scissors") {
+		cout << "\nI chose " << rocky[prochoice] << " over your "
+			<< choice << "!!\n";
+		cout << "\nI won!!!\n";
+	}
+	else
+	{
+		cout << "\nI chose " << rocky[prochoice] << " over your "
+			<< choice << "!!\n";
+		cout << "\nYou won!!!\n";
+	}
+	cout << "\n\nDo you still want to play? (y/n)\n";
+	cin >> answer;
+	cout << "\n\n";
+	if (answer != "y") {
+		break;
+	}
 	}
 }
 
