@@ -1429,35 +1429,84 @@ void bubblesort(vector <double>& vec) {
 //	
 //	keep_windy();
 //}
+// writing power function using recursion
+int powered(int a, int b) {
+	if (b != 0) {
+		return a * powered(a, b - 1);
+	}
+	else
+		return 1;
+}
 
-// analysing 2^x power function
 int main() {
-	int square = 0;
-	double grains = 0.0;
-	double k = 0.0;
-	cout << "Here is the count of squares based on how many grains we want.\n";
-	for (int i = 0; i < 64; ++i) {
-		k = i;
-		grains = pow(2.0,k);
-		cout << grains << "\n";
-		if (grains >= 1000 && grains <=1999) {
-			cout << fixed;
-			cout << "\non square " << i + 1 << " we have at least 1000 grains.\n\n\n";
-			
+	vector <int> evened = { 2,4,6,8,10 };
+	vector <int> expon = { 3,4,5 };
+	cout << "testing the power function I wrote: \n";
+	for (int x : evened) {
+		for (int y : expon) {
+			cout << x << "^" << y << "=="
+				<< powered(x, y) << "\n";
 		}
-		else if (grains >= 1000000 && grains <= 1900000) {
-			cout << fixed;
-			cout << "\non square " << i + 1 << " we have at least 1000000 grains.\n\n\n";
-			
-		}
-		else if (grains >= 1000000000 && grains <= 1900000000) {
-			cout << fixed;
-			cout << "\non square " << i + 1 << " we have at least 1000000000 grains.\n\n\n";
-			
-		}
-
 	}
 }
+// analysing 2^x power function using integer
+//int main() {
+//	int square = 0;
+//	int grains = 0;
+//	int k = 0;
+//	cout << "Here is the count of squares based on how many grains we want.\n";
+//	for (int i = 0; i < 64; ++i) {
+//		k = i;
+//		grains = powered(2, k);
+//		cout << grains << "\n";
+//		if (grains >= 1000 && grains <= 1999) {
+//			cout << fixed;
+//			cout << "\non square " << i + 1 << " we have at least 1000 grains.\n\n\n";
+//
+//		}
+//		else if (grains >= 1000000 && grains <= 1900000) {
+//			cout << fixed;
+//			cout << "\non square " << i + 1 << " we have at least 1000000 grains.\n\n\n";
+//
+//		}
+//		else if (grains >= 1000000000 && grains <= 1900000000) {
+//			cout << fixed;
+//			cout << "\non square " << i + 1 << " we have at least 1000000000 grains.\n\n\n";
+//
+//		}
+//
+//	}
+//}
+
+
+// analysing 2^x power function using doubles
+//int main() {
+//	int square = 0;
+//	double grains = 0.0;
+//	double k = 0.0;
+//	cout << "Here is the count of squares based on how many grains we want.\n";
+//	for (int i = 0; i < 64; ++i) {
+//		k = i;
+//		grains = pow(2.0,k);
+//		cout << grains << "\n";
+//		if (grains >= 1000 && grains <=1999) {
+//			cout << fixed;
+//			cout << "\non square " << i + 1 << " we have at least 1000 grains.\n\n\n";
+//			
+//		}
+//		else if (grains >= 1000000 && grains <= 1900000) {
+//			cout << fixed;
+//			cout << "\non square " << i + 1 << " we have at least 1000000 grains.\n\n\n";
+//			
+//		}
+//		else if (grains >= 1000000000 && grains <= 1900000000) {
+//			cout << fixed;
+//			cout << "\non square " << i + 1 << " we have at least 1000000000 grains.\n\n\n";
+//			
+//		}
+//
+//	}
+//}
 
 
 // chapter 5. Errors
