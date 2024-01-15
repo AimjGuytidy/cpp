@@ -1575,13 +1575,18 @@ int is_prime(int a) {
 
 int main() {
 	int i = 0;
+	vector <int> primizo;
 	while (i < 101) {
 		if (is_prime(i)) {
+			primizo.push_back(i);
 			cout << i << " is prime\n";
 		}
 		else
 			cout << i << "\n";
 		++i;
+	}
+	for (int x : primizo) {
+		cout << x << "\t";
 	}
 }
 // chapter 5. Errors
