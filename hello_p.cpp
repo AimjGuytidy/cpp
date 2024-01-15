@@ -1573,10 +1573,32 @@ int is_prime(int a) {
 	
 }
 
+//int main() {
+//	int i = 0;
+//	vector <int> primizo;
+//	while (i < 101) {
+//		if (is_prime(i)) {
+//			primizo.push_back(i);
+//			cout << i << " is prime\n";
+//		}
+//		else
+//			cout << i << "\n";
+//		++i;
+//	}
+//	for (int x : primizo) {
+//		cout << x << "\t";
+//	}
+//}
+
+// find primes based on a given threshold
+
 int main() {
 	int i = 0;
+	int maxa = 0;
 	vector <int> primizo;
-	while (i < 101) {
+	cout << "Please enter a maximum number so we can find primes between 1 and the number?\n";
+	cin >> maxa;
+	while (i < maxa + 1) {
 		if (is_prime(i)) {
 			primizo.push_back(i);
 			cout << i << " is prime\n";
@@ -1589,6 +1611,7 @@ int main() {
 		cout << x << "\t";
 	}
 }
+
 // chapter 5. Errors
 
 // // Intro
