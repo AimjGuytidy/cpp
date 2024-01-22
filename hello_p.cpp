@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <vector>
 #include <cstdlib>
+#include <map>
 using namespace std;
 inline void keep_windy() { char ch; cin >> ch; }
 //int main()
@@ -1613,22 +1614,76 @@ int is_prime(int a) {
 //}
 
 
-int main() {
-	int i = 0;
-	int n = 0;
-	vector <int> primizo;
-	cout << "Please enter a maximum number of primes you want?\n";
-	cin >> n;
-	while (primizo.size() < n ) {
-		if (is_prime(i)) {
-			primizo.push_back(i);
-			cout << i << " is prime\n";
+//int main() {
+//	int i = 0;
+//	int n = 0;
+//	vector <int> primizo;
+//	cout << "Please enter a maximum number of primes you want?\n";
+//	cin >> n;
+//	while (primizo.size() < n ) {
+//		if (is_prime(i)) {
+//			primizo.push_back(i);
+//			cout << i << " is prime\n";
+//		}
+//		++i;
+//	}
+//	for (int x : primizo) {
+//		cout << x << "\t";
+//	}
+//}
+
+double mode_find(vector <double>& vecty) {
+	bubblesort(vecty);
+	map <double, int> my_map;
+	
+	pair <double, int> modeentry = make_pair(0.0,0);
+	for (double x : vecty) {
+		int t = 0;
+		for (int j = 0; j < vecty.size(); ++j)
+		{
+			if (vecty[j] == x) {
+				++t;
+			}
+			
+
 		}
-		++i;
+		
+		my_map[x] = t;
 	}
-	for (int x : primizo) {
-		cout << x << "\t";
+	map <double, int> ::iterator current;
+	for (current = my_map.begin();
+		current != my_map.end();
+		++current) {
+		if (current->second > modeentry.second) {
+			modeentry = make_pair(current->first, current->second);
+		}
 	}
+	return modeentry.first;
+	
+}
+
+double max_find(vector <double>& vecty) {
+	bubblesort(vecty);
+	return vecty.back();
+}
+
+double min_find(vector <double>& vecty) {
+	bubblesort(vecty);
+	return vecty.front();
+}
+
+//finding mode
+int main() {
+	vector <double> central_tendency_finder;
+	double input = 0.0;
+	cout << "Please enter a series of numbers: \n";
+	while (cin >> input) {
+		central_tendency_finder.push_back(input);
+	}
+	cout << "\nThe mode of the entered sequence of numbers is " << mode_find(central_tendency_finder) << "!\n";
+	std::cout << "\nThe max of the entered sequence of numbers is " << max_find(central_tendency_finder) << " !\n";
+	cout << "\nThe min of the entered sequence of numbers is " << min_find(central_tendency_finder) << " !\n";
+
 }
 
 // chapter 5. Errors
