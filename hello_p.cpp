@@ -1673,19 +1673,83 @@ double min_find(vector <double>& vecty) {
 }
 
 //finding mode
-int main() {
-	vector <double> central_tendency_finder;
-	double input = 0.0;
-	cout << "Please enter a series of numbers: \n";
-	while (cin >> input) {
-		central_tendency_finder.push_back(input);
-	}
-	cout << "\nThe mode of the entered sequence of numbers is " << mode_find(central_tendency_finder) << "!\n";
-	std::cout << "\nThe max of the entered sequence of numbers is " << max_find(central_tendency_finder) << " !\n";
-	cout << "\nThe min of the entered sequence of numbers is " << min_find(central_tendency_finder) << " !\n";
+//int main() {
+//	vector <double> central_tendency_finder;
+//	double input = 0.0;
+//	cout << "Please enter a series of numbers: \n";
+//	while (cin >> input) {
+//		central_tendency_finder.push_back(input);
+//	}
+//	cout << "\nThe mode of the entered sequence of numbers is " << mode_find(central_tendency_finder) << "!\n";
+//	std::cout << "\nThe max of the entered sequence of numbers is " << max_find(central_tendency_finder) << " !\n";
+//	cout << "\nThe min of the entered sequence of numbers is " << min_find(central_tendency_finder) << " !\n";
+//
+//}
 
+// Solve for quadratic equation: ax^2 + bx + c
+double solve_quad(double a, double b, double c) {
+	double x1 = 0.0;
+	double x2 = 0.0;
+	x1 = (-b + sqrt(sqq(b) - (4 * a * c))) / (2 * a);
+	x2 = (-b - sqrt(sqq(b) - (4 * a * c))) / (2 * a);
+	return x1, x2;
 }
 
+int main() {
+	string namess;
+	string input;
+	double input_2 = 0.0;
+	double scoress = 0.0;
+	vector <string> names;
+	vector <double> scores;
+	cout << "Please enter a set of name-and-value pairs: \n";
+	while (cin >> namess >> scoress) {
+		names.push_back(namess);
+		scores.push_back(scoress);
+		for (int i = 0; i < names.size()-1;++i) {
+			if (names[i] == namess) {
+				std::cerr << "Please enter different names!\n";
+				terminate;
+			}
+		}
+		if (namess == "NoName" && scoress == 0) {
+			break;
+		}
+	}
+	for (int x = 0; x < scores.size(); ++x) {
+		cout << "(" << names[x] << "," << scores[x] << ")\n";
+	}
+	cout << "\nPlease enter a name and we display corresponding scores: \n";
+	cin >> input;
+	bool foundo = false;
+	for (int i = 0; i < names.size(); ++i) {
+		if (names[i] == input) {
+			cout << "\n(" << input <<"," << scores[i] << ")\n";
+			foundo = true;
+			break;
+		}
+		
+	}
+	if (!foundo) {
+		cout << "\nname not found.\n";
+	}
+	cout << "\nPlease enter a score and we display corresponding names: \n";
+	cin >> input_2;
+	bool found = false;
+	for (int i = 0; i < names.size(); ++i) {
+		if (scores[i] == input_2) {
+			cout << "\n(" << names[i] << "," << input_2 << ")\n";
+			found = true;
+			
+		}
+
+	}
+	if (!found) {
+		cout << "\nscore not found.\n";
+	}
+	/*else
+		cout << "name not found.\n";*/
+}
 // chapter 5. Errors
 
 // // Intro
