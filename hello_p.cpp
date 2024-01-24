@@ -1695,61 +1695,61 @@ double solve_quad(double a, double b, double c) {
 	return x1, x2;
 }
 
-int main() {
-	string namess;
-	string input;
-	double input_2 = 0.0;
-	double scoress = 0.0;
-	vector <string> names;
-	vector <double> scores;
-	cout << "Please enter a set of name-and-value pairs: \n";
-	while (cin >> namess >> scoress) {
-		names.push_back(namess);
-		scores.push_back(scoress);
-		for (int i = 0; i < names.size()-1;++i) {
-			if (names[i] == namess) {
-				std::cerr << "Please enter different names!\n";
-				terminate;
-			}
-		}
-		if (namess == "NoName" && scoress == 0) {
-			break;
-		}
-	}
-	for (int x = 0; x < scores.size(); ++x) {
-		cout << "(" << names[x] << "," << scores[x] << ")\n";
-	}
-	cout << "\nPlease enter a name and we display corresponding scores: \n";
-	cin >> input;
-	bool foundo = false;
-	for (int i = 0; i < names.size(); ++i) {
-		if (names[i] == input) {
-			cout << "\n(" << input <<"," << scores[i] << ")\n";
-			foundo = true;
-			break;
-		}
-		
-	}
-	if (!foundo) {
-		cout << "\nname not found.\n";
-	}
-	cout << "\nPlease enter a score and we display corresponding names: \n";
-	cin >> input_2;
-	bool found = false;
-	for (int i = 0; i < names.size(); ++i) {
-		if (scores[i] == input_2) {
-			cout << "\n(" << names[i] << "," << input_2 << ")\n";
-			found = true;
-			
-		}
-
-	}
-	if (!found) {
-		cout << "\nscore not found.\n";
-	}
-	/*else
-		cout << "name not found.\n";*/
-}
+//int main() {
+//	string namess;
+//	string input;
+//	double input_2 = 0.0;
+//	double scoress = 0.0;
+//	vector <string> names;
+//	vector <double> scores;
+//	cout << "Please enter a set of name-and-value pairs: \n";
+//	while (cin >> namess >> scoress) {
+//		names.push_back(namess);
+//		scores.push_back(scoress);
+//		for (int i = 0; i < names.size()-1;++i) {
+//			if (names[i] == namess) {
+//				std::cerr << "Please enter different names!\n";
+//				terminate;
+//			}
+//		}
+//		if (namess == "NoName" && scoress == 0) {
+//			break;
+//		}
+//	}
+//	for (int x = 0; x < scores.size(); ++x) {
+//		cout << "(" << names[x] << "," << scores[x] << ")\n";
+//	}
+//	cout << "\nPlease enter a name and we display corresponding scores: \n";
+//	cin >> input;
+//	bool foundo = false;
+//	for (int i = 0; i < names.size(); ++i) {
+//		if (names[i] == input) {
+//			cout << "\n(" << input <<"," << scores[i] << ")\n";
+//			foundo = true;
+//			break;
+//		}
+//		
+//	}
+//	if (!foundo) {
+//		cout << "\nname not found.\n";
+//	}
+//	cout << "\nPlease enter a score and we display corresponding names: \n";
+//	cin >> input_2;
+//	bool found = false;
+//	for (int i = 0; i < names.size(); ++i) {
+//		if (scores[i] == input_2) {
+//			cout << "\n(" << names[i] << "," << input_2 << ")\n";
+//			found = true;
+//			
+//		}
+//
+//	}
+//	if (!found) {
+//		cout << "\nscore not found.\n";
+//	}
+//	/*else
+//		cout << "name not found.\n";*/
+//}
 // chapter 5. Errors
 
 // // Intro
@@ -1761,25 +1761,113 @@ int main() {
 
 
 
-//int fibonacci(int k) {
+int fibonacci(int k) {
+
+	if (k == 0) {
+		return 0;
+	}
+	else if (k == 1) {
+		return 1;
+	}
+	else {
+		return fibonacci(k-1) + fibonacci(k - 2);
+	}
+}
+
+// Quicksort 
+// // swap
+void swap(double& i, double& j) {
+	double swap1 = i;
+	i = j;
+	j = swap1;
+}
+// // Partition
+int partition(vector<double>& vecky,int lo, int hi) {
+	double pivot = vecky[hi];
+	int i = lo - 1;
+	for (int j = lo; j < hi; ++j) {
+		if (vecky[j] < pivot) {
+			++i;
+			swap(vecky[i], vecky[j]);
+		}	
+	}
+	swap(vecky[i + 1], vecky[hi]);
+	return i + 1;
+}
+void quicksort(vector<double>& vecky, int lo, int hi) {
+	if (lo >= 0.0 && hi >= 0.0 && lo < hi) {
+		int p = partition(vecky, lo, hi);
+		quicksort(vecky, lo, p - 1);
+		quicksort(vecky, p + 1, hi);
+	}
+}
+
+
+int main() {
+	vector <double> vec = { 12.0, 4.0, 25.0, 15.0, 7.0, 3.0, 1.0, 15.0 };
+	cout << "quicksort: \n";
+	cout << partition(vec, 0, vec.size()-1) << "\n";
+	quicksort(vec,0, vec.size() - 1);
+	for (int x : vec) {
+		cout << x << "\t";
+	}
+} 
+
+//void swap(int& a, int& b) {
+//	int temp = a;
+//	a = b;
+//	b = temp;
+//}
 //
-//	if (k == 0) {
-//		return 0;
+//int partition(vector<int>& arr, int low, int high) {
+//	int pivot = arr[high];
+//	int i = low - 1;
+//
+//	for (int j = low; j < high; ++j) {
+//		if (arr[j] < pivot) {
+//			++i;
+//			swap(arr[i], arr[j]);
+//		}
 //	}
-//	else if (k == 1) {
-//		return 1;
-//	}
-//	else {
-//		return fibonacci(k-1) + fibonacci(k - 2);
+//
+//	swap(arr[i + 1], arr[high]);
+//	return i + 1;
+//}
+//
+//void quicksort(vector<int>& arr, int low, int high) {
+//	if (low < high) {
+//		int pivotIndex = partition(arr, low, high);
+//
+//		quicksort(arr, low, pivotIndex - 1);
+//		quicksort(arr, pivotIndex + 1, high);
 //	}
 //}
 //
 //int main() {
-//	int number = 0;
-//	cout << "enter how many fibo u want: \n";
-//	cin >> number;
-//	cout << "\n" << fibonacci(number);
-//} fibonacci
+//	vector<int> arr = { 12, 4, 5, 6, 7, 3, 1, 15 };
+//	int n = arr.size();
+//
+//	std::cout << "Original array: ";
+//	for (int num : arr) {
+//		std::cout << num << " ";
+//	}
+//
+//	quicksort(arr, 0, n - 1);
+//
+//	std::cout << "\nSorted array: ";
+//	for (int num : arr) {
+//		std::cout << num << " ";
+//	}
+//
+//	return 0;
+//}
+
+
+
+
+
+
+
 
 
 // // Sources of errors
